@@ -34,5 +34,13 @@ $periodes = ['midi', 'soir'];
             <button type="submit">Envoyer ma réponse</button>
         </form>
     </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
 </body>
 </html>
