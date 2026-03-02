@@ -2,11 +2,11 @@
   "short_name": "RAK Poll",
   "name": "Sondage RAK - Anti-Gaspillage",
   "description": "Application de prévision des repas pour le RAK",
-  "start_url": "./index.php",
+  "start_url": "./rak-canteen-pwa.html",
   "scope": "./",
   "display": "standalone",
-  "theme_color": "#27ae60",
-  "background_color": "#ffffff",
+  "theme_color": "#1a1a2e",
+  "background_color": "#0d0f1a",
   "icons": [
     {
       "src": "icons/icon-192.svg",
