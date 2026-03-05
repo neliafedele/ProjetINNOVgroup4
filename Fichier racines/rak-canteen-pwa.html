@@ -328,7 +328,7 @@
           <button class="star-btn" onclick="setStar(4)">⭐</button>
           <button class="star-btn" onclick="setStar(5)">⭐</button>
         </div>
-        <div class="label">Catégorie</div>
+        <div class="label">Catégorie (optionnelle)</div>
         <div class="tag-row" id="catTags">
           <span class="tag" onclick="selectTag(this,'qualité')">Qualité</span>
           <span class="tag" onclick="selectTag(this,'quantité')">Quantité</span>
@@ -339,7 +339,7 @@
         </div>
         <div class="label">Plat ou aliment concerné (optionnel)</div>
         <input type="text" id="foodInput" placeholder="ex: poulet rôti, salade composée…">
-        <div class="label">Commentaire</div>
+        <div class="label">Commentaire (optionnel)</div>
         <textarea class="textarea" id="feedbackText" placeholder="Dis-nous ce que tu as pensé…"></textarea>
         <button class="btn btn-blue" onclick="submitFeedback()">Envoyer mon avis</button>
         <div class="success-msg" id="feedbackSuccess">✅ Feedback envoyé ! Merci de ta contribution.</div>
@@ -467,29 +467,15 @@ const jours = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'];
 const periodes = ['midi', 'soir'];
 
 const menuItems = [
-  {emoji:'🥩', name:'Bœuf bourguignon', desc:'Mijoté aux herbes & carottes'},
-  {emoji:'🍗', name:'Poulet rôti provençal', desc:'Tomates, olives, romarin'},
-  {emoji:'🌮', name:'Tacos légumes grillés', desc:'Option végétarienne'},
-  {emoji:'🍝', name:'Pâtes à la carbonara', desc:'Recette maison, lardons fumés'},
-  {emoji:'🐟', name:'Filet de saumon', desc:'Sauce citron beurre, riz basmati'},
+  {emoji:'🥩', name:'Rougail de saucisses au porc', desc:'Riz bio au curcuma et poëlée wok'},
+  {emoji:'🍗', name:'Brochette de dinde tandoori', desc:'Semoule et poëlée chinoise'},
+  {emoji:'🌮', name:'Pizza au kebab', desc:'Salade verte'},
+  {emoji:'🍝', name:'Hamburger au boeuf', desc:'Frites et salade iceberg'},
+  {emoji:'🐟', name:'	Cordon bleu de dinde', desc:'Coquillettes bio et poëlée méridionale'},
 ];
 
-const feedbacksData = [
-  {stars:5, cat:'qualité', food:'Poulet rôti', text:'Super repas, le poulet était vraiment excellent ce midi !', time:'Hier 12:34'},
-  {stars:4, cat:'variété', food:'', text:'Bonne diversité cette semaine, continue comme ça.', time:'Lun. 13:01'},
-  {stars:3, cat:'quantité', food:'Salade', text:'Les portions sont un peu petites pour les samedis…', time:'Lun. 12:47'},
-  {stars:5, cat:'service', food:'', text:'Équipe très sympa et rapide, ambiance agréable.', time:'Ven. 19:22'},
-  {stars:2, cat:'propreté', food:'', text:'Tables pas toujours bien nettoyées en soirée.', time:'Jeu. 19:55'},
-];
-
-const recipesData = [
-  {emoji:'🥩', name:'Bœuf bourguignon', score:4.8, votes:67},
-  {emoji:'🍗', name:'Poulet rôti provençal', score:4.6, votes:54},
-  {emoji:'🐟', name:'Filet de saumon citron', score:4.5, votes:42},
-  {emoji:'🍝', name:'Pâtes carbonara maison', score:4.3, votes:38},
-  {emoji:'🫕', name:'Tajine légumes & pois chiches', score:4.2, votes:31},
-  {emoji:'🌮', name:'Tacos légumes grillés', score:4.0, votes:29},
-];
+let feedbacksData = [];
+let recipesData = [];
 
 let dayData = {
   current: [{day:'Lundi',midi:11,soir:7},{day:'Mardi',midi:14,soir:8},{day:'Mercredi',midi:9,soir:5},{day:'Jeudi',midi:8,soir:6},{day:'Vendredi',midi:5,soir:3}],
@@ -545,6 +531,7 @@ function enterApp() {
   } else {
     document.getElementById('view-home-staff').classList.add('active');
     initDayBars(); initFeedbacks(); initRecipes(); initStaffMenu();
+    loadFeedbackData();
   }
 }
 
@@ -619,19 +606,50 @@ function selectTag(el, tag) {
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
   el.classList.add('selected');
 }
-function submitFeedback() {
+async function submitFeedback() {
   if (!selStar) { alert('Donne une note d\'abord !'); return; }
-  const text = document.getElementById('feedbackText').value;
-  const food = document.getElementById('foodInput').value;
-  if (text) feedbacksData.unshift({stars:selStar, cat:selTag, food, text, time:"À l'instant"});
+  const text = document.getElementById('feedbackText').value.trim();
+  const food = document.getElementById('foodInput').value.trim();
+
+  try {
+    const res = await fetch('feedback.php', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({stars: selStar, cat: selTag, food, text})
+    });
+
+    if (!res.ok) {
+      throw new Error('Erreur envoi feedback');
+    }
+
+    const saved = await res.json();
+    if (saved && saved.item) {
+      feedbacksData.unshift(saved.item);
+    }
+
+    computeRecipesFromFeedbacks();
+    initFeedbacks();
+    initRecipes();
+
+    const s = document.getElementById('feedbackSuccess');
+    s.textContent = '✅ Feedback envoyé ! Merci de ta contribution.';
+    s.classList.add('show');
+    setTimeout(() => s.classList.remove('show'), 4000);
+  } catch (_) {
+    const s = document.getElementById('feedbackSuccess');
+    s.textContent = '⚠️ Envoi impossible pour le moment. Réessaie.';
+    s.classList.add('show');
+    setTimeout(() => s.classList.remove('show'), 4500);
+    return;
+  }
+
   const s = document.getElementById('feedbackSuccess');
-  s.classList.add('show'); setTimeout(() => s.classList.remove('show'), 4000);
   selStar = 0;
   document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('lit'));
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
   document.getElementById('feedbackText').value = '';
   document.getElementById('foodInput').value = '';
-  initFeedbacks();
+  selTag = '';
 }
 
 // ===== MENU (student — AUCUN chiffre de vote affiché) =====
@@ -738,21 +756,98 @@ function initDayBars(week='current') {
     </div>`).join('') + `<div style="display:flex;gap:1rem;margin-top:.5rem;font-size:.72rem;color:var(--text2)"><span style="color:var(--accent)">■</span> Midi &nbsp;<span style="color:var(--blue)">■</span> Soir</div>`;
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+function formatFeedbackTime(value) {
+  if (!value) return '';
+  if (value === "À l'instant") return value;
+  const parsed = new Date(value.replace(' ', 'T'));
+  if (Number.isNaN(parsed.getTime())) return value;
+  return parsed.toLocaleString('fr-FR', {
+    day: '2-digit',
+    month: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+function normalizeFoodName(name) {
+  if (!name) return '';
+  return name
+    .trim()
+    .replace(/\s+/g, ' ')
+    .toLowerCase()
+    .replace(/^./, c => c.toUpperCase());
+}
+
+function computeRecipesFromFeedbacks() {
+  const byFood = {};
+  feedbacksData.forEach((item) => {
+    const foodName = normalizeFoodName(item.food);
+    if (!foodName) return;
+    if (!byFood[foodName]) {
+      byFood[foodName] = {name: foodName, total: 0, votes: 0};
+    }
+    byFood[foodName].total += Number(item.stars || 0);
+    byFood[foodName].votes += 1;
+  });
+
+  recipesData = Object.values(byFood)
+    .map((entry) => ({
+      name: entry.name,
+      score: Math.round((entry.total / entry.votes) * 10) / 10,
+      votes: entry.votes
+    }))
+    .sort((a, b) => (b.score - a.score) || (b.votes - a.votes))
+    .slice(0, 8);
+}
+
+async function loadFeedbackData() {
+  try {
+    const res = await fetch('feedback.php', {cache: 'no-store'});
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!Array.isArray(data)) return;
+    feedbacksData = data;
+    computeRecipesFromFeedbacks();
+    initFeedbacks();
+    initRecipes();
+  } catch (_) {
+    // garde l'affichage actuel si feedback.php n'est pas accessible
+  }
+}
+
 function initFeedbacks() {
-  document.getElementById('feedbackList').innerHTML = feedbacksData.map(f => `
+  const list = document.getElementById('feedbackList');
+  if (!feedbacksData.length) {
+    list.innerHTML = `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucun feedback pour l'instant.</div></div>`;
+    return;
+  }
+  list.innerHTML = feedbacksData.map(f => `
     <div class="feedback-item">
       <div class="feedback-stars">${'⭐'.repeat(f.stars)}</div>
-      ${f.food?`<div style="font-size:.78rem;color:var(--accent2);margin-bottom:.3rem">🍽 ${f.food}</div>`:''}
-      <div class="feedback-text">${f.text}</div>
-      <div class="feedback-meta">${f.cat?`[${f.cat}]  `:''}${f.time}</div>
+      ${f.food?`<div style="font-size:.78rem;color:var(--accent2);margin-bottom:.3rem">🍽 ${escapeHtml(f.food)}</div>`:''}
+      ${f.text?`<div class="feedback-text">${escapeHtml(f.text)}</div>`:''}
+      <div class="feedback-meta">${f.cat?`[${escapeHtml(f.cat)}]  `:''}${escapeHtml(formatFeedbackTime(f.time))}</div>
     </div>`).join('');
 }
 
 function initRecipes() {
-  document.getElementById('recipeList').innerHTML = recipesData.map((r,i) => `
+  const recipeList = document.getElementById('recipeList');
+  if (!recipesData.length) {
+    recipeList.innerHTML = `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Pas assez d'avis sur des plats pour établir un classement.</div></div>`;
+    return;
+  }
+  recipeList.innerHTML = recipesData.map((r,i) => `
     <div class="recipe-item">
       <div class="recipe-rank ${i<3?'top':''}">#${i+1}</div>
-      <div style="font-size:1.6rem">${r.emoji}</div>
       <div style="flex:1;font-weight:500;font-size:.92rem">${r.name}<br><span style="color:var(--text2);font-size:.78rem">${r.votes} votes</span></div>
       <div class="recipe-score">⭐ ${r.score}</div>
     </div>`).join('');
