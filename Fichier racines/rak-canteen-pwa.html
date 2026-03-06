@@ -339,6 +339,8 @@
         </div>
         <div class="label">Plat ou aliment concerné (optionnel)</div>
         <input type="text" id="foodInput" placeholder="ex: poulet rôti, salade composée…">
+        <div class="label">Prénom (optionnel)</div>
+        <input type="text" id="nameInput" placeholder="Anonyme">
         <div class="label">Commentaire (optionnel)</div>
         <textarea class="textarea" id="feedbackText" placeholder="Dis-nous ce que tu as pensé…"></textarea>
         <button class="btn btn-blue" onclick="submitFeedback()">Envoyer mon avis</button>
@@ -607,15 +609,24 @@ function selectTag(el, tag) {
   el.classList.add('selected');
 }
 async function submitFeedback() {
-  if (!selStar) { alert('Donne une note d\'abord !'); return; }
   const text = document.getElementById('feedbackText').value.trim();
   const food = document.getElementById('foodInput').value.trim();
+  const name = document.getElementById('nameInput').value.trim();
+
+  if (!selStar && !text) { alert('Ajoute une note ou un commentaire !'); return; }
 
   try {
     const res = await fetch('feedback.php', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({stars: selStar, cat: selTag, food, text})
+      body: JSON.stringify({
+        type: 'general',
+        stars: selStar,
+        cat: selTag,
+        food,
+        name,
+        text
+      })
     });
 
     if (!res.ok) {
@@ -649,6 +660,7 @@ async function submitFeedback() {
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
   document.getElementById('feedbackText').value = '';
   document.getElementById('foodInput').value = '';
+  document.getElementById('nameInput').value = '';
   selTag = '';
 }
 
@@ -811,7 +823,7 @@ function computeRecipesFromFeedbacks() {
 
 async function loadFeedbackData() {
   try {
-    const res = await fetch('feedback.php', {cache: 'no-store'});
+    const res = await fetch('feedback.php?type=general', {cache: 'no-store'});
     if (!res.ok) return;
     const data = await res.json();
     if (!Array.isArray(data)) return;
@@ -832,10 +844,10 @@ function initFeedbacks() {
   }
   list.innerHTML = feedbacksData.map(f => `
     <div class="feedback-item">
-      <div class="feedback-stars">${'⭐'.repeat(f.stars)}</div>
+      <div class="feedback-stars">${f.stars > 0 ? '⭐'.repeat(f.stars) : 'Sans note'}</div>
       ${f.food?`<div style="font-size:.78rem;color:var(--accent2);margin-bottom:.3rem">🍽 ${escapeHtml(f.food)}</div>`:''}
       ${f.text?`<div class="feedback-text">${escapeHtml(f.text)}</div>`:''}
-      <div class="feedback-meta">${f.cat?`[${escapeHtml(f.cat)}]  `:''}${escapeHtml(formatFeedbackTime(f.time))}</div>
+      <div class="feedback-meta">${escapeHtml(f.name || 'Anonyme')} • ${f.cat?`[${escapeHtml(f.cat)}]  `:''}${escapeHtml(formatFeedbackTime(f.time))}</div>
     </div>`).join('');
 }
 

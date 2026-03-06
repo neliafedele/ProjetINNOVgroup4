@@ -74,7 +74,7 @@ make run-lan
 
 2. Depuis le téléphone (connecté au même Wi‑Fi), ouvre :
 
-- http://10.129.195.25:8000/rak-canteen-pwa.html
+- http://10.129.195.25:8000/rak-canteen-pwa.html #adapter en fonction de l'IP de votre ordinateur
 
 3. Si la page ne s'ouvre pas :
 
