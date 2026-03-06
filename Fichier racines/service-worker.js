@@ -1,9 +1,12 @@
-const CACHE_NAME = 'rak-pwa-v2';
+const CACHE_NAME = 'rak-pwa-v3';
 const PRECACHE_URLS = [
   './',
   './index.php',
   './rak-canteen-pwa.html',
   './admin_rak.php',
+  './menu-source.php',
+  './menu-source-config.json',
+  './menu-week.json',
   './manifest.json',
   './icons/icon-192.svg',
   './icons/icon-512.svg'

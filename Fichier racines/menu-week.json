@@ -1,0 +1,35 @@
+{
+  "weekLabel": "Semaine du 9 mars",
+  "dishes": [
+    {
+      "emoji": "🥩",
+      "name": "Rougail de saucisses au porc",
+      "desc": "Riz bio au curcuma et poelee wok",
+      "type": "non-vege"
+    },
+    {
+      "emoji": "🍗",
+      "name": "Brochette de dinde tandoori",
+      "desc": "Semoule et poelee chinoise",
+      "type": "non-vege"
+    },
+    {
+      "emoji": "🌮",
+      "name": "Pizza au kebab",
+      "desc": "Salade verte",
+      "type": "non-vege"
+    },
+    {
+      "emoji": "🍝",
+      "name": "Hamburger au boeuf",
+      "desc": "Frites et salade iceberg",
+      "type": "non-vege"
+    },
+    {
+      "emoji": "🐟",
+      "name": "Cordon bleu de dinde",
+      "desc": "Coquillettes bio et poelee meridionale",
+      "type": "non-vege"
+    }
+  ]
+}

@@ -2,8 +2,8 @@
 
 Application web/PWA de cantine avec :
 - sondage de présence,
-- feedbacks étudiants,
-- vote des menus,
+- feedbacks étudiants (note globale + note par plat),
+- vote des menus (1 choix midi + 1 choix soir, au moins 1 choix),
 - vue personnel (KPI + feedbacks + recettes populaires).
 
 ## Prérequis
@@ -54,6 +54,42 @@ Lancer l'ancienne page formulaire (`index.php`) :
 make run-index
 ```
 
+## Brancher les plats sur une API externe
+
+Le menu hebdomadaire est charge via `Fichier racines/menu-source.php`.
+
+1. Ouvrir `Fichier racines/menu-source-config.json`
+2. Mettre l'URL source dans `remoteMenuUrl` (exemple: `https://services.imt-atlantique.fr/rak/pagemenu.php`)
+
+Formats supportes par `menu-source.php` :
+
+- JSON direct (`weekLabel` + `dishes`)
+- HTML (page RAK) parse automatiquement en plats
+
+Exemple JSON supporte :
+
+```json
+{
+	"weekLabel": "Semaine du 16 mars",
+	"dishes": [
+		{"emoji": "🍛", "name": "Cari poulet", "desc": "Riz et legumes", "meal": "midi", "type": "non-vege", "day": "lundi"}
+	]
+}
+```
+
+Si l'URL externe est vide, invalide, ou indisponible, l'app utilise automatiquement `Fichier racines/menu-week.json`.
+
+Comportement semaine :
+
+- Feedback et notation des plats: semaine en cours (`?week=current`)
+- Vote menu et presence: semaine suivante (`?week=next`)
+
+Affichage des plats :
+
+- Regroupement par service (`Midi` / `Soir`)
+- Puis par jour
+- Puis par categorie (`Plats non vege` / `Plats vege`)
+
 ## Lancer sans Makefile (manuel)
 
 ```bash
@@ -90,7 +126,11 @@ make run-lan
 
 - Ouvrir l’app via serveur local (pas en double-clic fichier).
 - Vérifier l’installation PWA (menu navigateur → Installer l’application).
-- En mode étudiant : envoyer présence, feedback, et vote menu.
+- En mode étudiant : envoyer présence.
+- En mode étudiant : envoyer un feedback global.
+- En mode étudiant : noter des plats (optionnel, pas obligatoire pour tous).
+- En mode étudiant : voter menu sur au moins un service (midi et/ou soir).
 - Recharger puis passer en mode personnel : vérifier KPI, feedbacks et recettes.
+- Vérifier que les listes plats sont bien organisees par jour dans chaque onglet `Midi/Soir`.
 - Tester hors-ligne : couper internet puis recharger (service worker/cache).
 - Si la version ne se met pas à jour : vider données du site/service worker puis recharger.

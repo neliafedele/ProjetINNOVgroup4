@@ -1,61 +1,61 @@
 {
     "lundi": {
         "midi": {
-            "oui": 2,
+            "oui": 0,
             "non": 0,
             "peut-etre": 0
         },
         "soir": {
             "oui": 0,
-            "non": 2,
+            "non": 0,
             "peut-etre": 0
         }
     },
     "mardi": {
         "midi": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         },
         "soir": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         }
     },
     "mercredi": {
         "midi": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         },
         "soir": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         }
     },
     "jeudi": {
         "midi": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         },
         "soir": {
             "oui": 0,
-            "non": 2,
+            "non": 0,
             "peut-etre": 0
         }
     },
     "vendredi": {
         "midi": {
-            "oui": 1,
-            "non": 1,
+            "oui": 0,
+            "non": 0,
             "peut-etre": 0
         },
         "soir": {
             "oui": 0,
-            "non": 2,
+            "non": 0,
             "peut-etre": 0
         }
     }

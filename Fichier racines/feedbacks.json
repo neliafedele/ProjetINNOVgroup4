@@ -1,1 +1,132 @@
-[]
+[
+    {
+        "type": "general",
+        "stars": 0,
+        "name": "Anonyme",
+        "cat": "",
+        "food": "",
+        "dishId": "",
+        "text": "Mets plus dans l'assiette stp",
+        "time": "2026-03-06 14:17:09"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Hamburger végétal",
+        "dishId": "hamburger-vegetal|soir|jeudi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Hamburger au boeuf",
+        "dishId": "hamburger-au-boeuf|soir|jeudi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 1,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Pizza 4 fromages",
+        "dishId": "pizza-4-fromages|soir|mercredi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 2,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Pizza kebab",
+        "dishId": "pizza-kebab|soir|mercredi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
+        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Rougail végétarienne (saucisses végétales)",
+        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "general",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "",
+        "food": "",
+        "dishId": "",
+        "text": "",
+        "time": "2026-03-06 14:01:52"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Filet de saumon sauce béarnaise",
+        "dishId": "filet-de-saumon-sauce-bearnaise|midi|vendredi",
+        "text": "",
+        "time": "2026-03-06 14:01:25"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Gratin de ratatouille à la polenta et reblochon",
+        "dishId": "gratin-de-ratatouille-a-la-polenta-et-reblochon|midi|lundi",
+        "text": "",
+        "time": "2026-03-06 14:01:25"
+    },
+    {
+        "type": "general",
+        "stars": 4,
+        "name": "Anonyme",
+        "cat": "",
+        "food": "",
+        "dishId": "",
+        "text": "",
+        "time": "2026-03-06 14:01:25"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Goulash (boeuf paprika)",
+        "dishId": "goulash-boeuf-paprika-midi",
+        "text": "",
+        "time": "2026-03-06 13:47:03"
+    },
+    {
+        "type": "general",
+        "stars": 4,
+        "name": "Anonyme",
+        "cat": "",
+        "food": "",
+        "dishId": "",
+        "text": "",
+        "time": "2026-03-06 13:47:03"
+    }
+]

@@ -132,6 +132,21 @@
   .tag-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1rem; }
   .tag { padding:.4rem .85rem; border-radius:20px; font-size:.8rem; background:var(--bg3); border:1.5px solid var(--border); color:var(--text2); cursor:pointer; transition:all .15s; }
   .tag:hover, .tag.selected { background:rgba(255,107,53,0.15); border-color:var(--accent); color:var(--accent); }
+  .dish-rating-list { display:flex; flex-direction:column; gap:.8rem; margin:.5rem 0 1.1rem; }
+  .feedback-meal-tabs { display:flex; gap:.45rem; margin:.5rem 0 .9rem; }
+  .feedback-meal-tab { flex:1; border:1.5px solid var(--border); background:var(--bg3); color:var(--text2); border-radius:10px; padding:.45rem .6rem; font-size:.8rem; font-family:'DM Sans',sans-serif; font-weight:600; cursor:pointer; transition:all .2s; }
+  .feedback-meal-tab.active { border-color:var(--accent); color:var(--accent); background:rgba(255,107,53,0.12); }
+  .dish-group { margin-bottom: .8rem; }
+  .dish-group-title { font-family:'Syne',sans-serif; font-size:.9rem; font-weight:700; margin-bottom:.5rem; }
+  .dish-group-title.vege { color: var(--accent3); }
+  .dish-group-title.non-vege { color: var(--accent2); }
+  .dish-group-title.general { color: var(--text2); }
+  .dish-empty { color: var(--text2); font-size:.8rem; margin-bottom:.5rem; }
+  .dish-rating-item { background:var(--bg3); border:1px solid var(--border); border-radius:12px; padding:.75rem .8rem; }
+  .dish-rating-title { font-family:'Syne',sans-serif; font-size:.9rem; font-weight:600; margin-bottom:.15rem; }
+  .dish-rating-desc { color:var(--text2); font-size:.76rem; margin-bottom:.45rem; }
+  .dish-stars-row { display:flex; gap:.35rem; }
+  .dish-star-btn { font-size:1.45rem; }
   input[type=text] { width:100%; background:var(--bg3); border:1px solid var(--border); border-radius:10px; color:var(--text); font-family:'DM Sans',sans-serif; font-size:.9rem; padding:.7rem 1rem; outline:none; margin-bottom:1rem; transition:border-color .2s; }
   input[type=text]:focus { border-color:rgba(255,107,53,0.5); }
   input[type=text]::placeholder { color:var(--text2); }
@@ -318,29 +333,18 @@
     <!-- Feedback -->
     <div class="view" id="view-feedback">
       <div class="section-title">💬 Feedback</div>
-      <p class="section-sub">Donne ton avis pour aider le personnel à s'améliorer.</p>
+      <p class="section-sub">Donne ton avis pour aider le personnel à s'améliorer. Tu peux noter seulement les plats que tu as goutes.</p>
       <div class="card">
-        <div class="card-title">Note globale</div>
+        <div class="card-title">Note globale sur la semaine </div>
         <div class="rating-row">
-          <button class="star-btn" onclick="setStar(1)">⭐</button>
-          <button class="star-btn" onclick="setStar(2)">⭐</button>
-          <button class="star-btn" onclick="setStar(3)">⭐</button>
-          <button class="star-btn" onclick="setStar(4)">⭐</button>
-          <button class="star-btn" onclick="setStar(5)">⭐</button>
+          <button class="star-btn overall-star-btn" onclick="setStar(1)">⭐</button>
+          <button class="star-btn overall-star-btn" onclick="setStar(2)">⭐</button>
+          <button class="star-btn overall-star-btn" onclick="setStar(3)">⭐</button>
+          <button class="star-btn overall-star-btn" onclick="setStar(4)">⭐</button>
+          <button class="star-btn overall-star-btn" onclick="setStar(5)">⭐</button>
         </div>
-        <div class="label">Catégorie (optionnelle)</div>
-        <div class="tag-row" id="catTags">
-          <span class="tag" onclick="selectTag(this,'qualité')">Qualité</span>
-          <span class="tag" onclick="selectTag(this,'quantité')">Quantité</span>
-          <span class="tag" onclick="selectTag(this,'variété')">Variété</span>
-          <span class="tag" onclick="selectTag(this,'service')">Service</span>
-          <span class="tag" onclick="selectTag(this,'propreté')">Propreté</span>
-          <span class="tag" onclick="selectTag(this,'prix')">Prix</span>
-        </div>
-        <div class="label">Plat ou aliment concerné (optionnel)</div>
-        <input type="text" id="foodInput" placeholder="ex: poulet rôti, salade composée…">
-        <div class="label">Prénom (optionnel)</div>
-        <input type="text" id="nameInput" placeholder="Anonyme">
+        <div class="label" id="dishWeekLabel">Note les plats de la semaine (optionnel)</div>
+        <div id="dishFeedbackList" class="dish-rating-list"></div>
         <div class="label">Commentaire (optionnel)</div>
         <textarea class="textarea" id="feedbackText" placeholder="Dis-nous ce que tu as pensé…"></textarea>
         <button class="btn btn-blue" onclick="submitFeedback()">Envoyer mon avis</button>
@@ -351,9 +355,9 @@
     <!-- Menu (student — NO vote counts) -->
     <div class="view" id="view-menu">
       <div class="section-title">🍽️ Vote menu</div>
-      <p class="section-sub">Quel plat voudrais-tu voir la semaine prochaine ? Choisis ton favori !</p>
+      <p class="section-sub">Quel plat as-tu hâte de voir la semaine prochaine ? Choisis ton favori !</p>
       <div class="card">
-        <div class="card-title">Semaine du 9 mars</div>
+        <div class="card-title" id="menuWeekTitle">Semaine en cours</div>
         <div id="menuOptions"></div>
         <button class="btn btn-yellow" id="menuVoteBtn" onclick="submitMenuVote()">Valider mon vote</button>
         <div class="success-msg" id="menuSuccess">✅ Vote enregistré ! Les résultats seront communiqués après clôture du sondage.</div>
@@ -385,6 +389,8 @@
       <div class="card">
         <div class="card-title">Répartition par jour</div>
         <div id="dayBars"></div>
+        <button class="btn btn-primary" style="margin-top:1rem" onclick="resetPresenceStats()">Réinitialiser les présences</button>
+        <div class="success-msg" id="presenceResetMsg">✅ Présences remises à zéro.</div>
       </div>
       <div class="card" onclick="showView('view-menu-staff')" style="cursor:pointer;border-color:rgba(255,209,102,0.3)">
         <div style="display:flex;align-items:center;justify-content:space-between">
@@ -408,7 +414,7 @@
 
     <div class="view" id="view-menu-staff">
       <div class="section-title">📊 Résultats vote menu</div>
-      <p class="section-sub">Préférences des étudiants — Semaine du 9 mars.</p>
+      <p class="section-sub" id="staffMenuWeekSub">Préférences des étudiants — Semaine en cours.</p>
       <div id="staffMenuList"></div>
     </div>
 
@@ -462,19 +468,196 @@ let selectedMeal = 'midi';
 let selDays = {midi: new Set(), soir: new Set()};
 let selStar = 0;
 let selTag = '';
-let selMenu = null;
+let dishRatings = {};
+let selectedFeedbackMeal = 'midi';
+let selectedStaffFeedbackMeal = 'midi';
+let selectedVoteMeal = 'midi';
+let selMenuByMeal = { midi: null, soir: null };
 let menuVoted = false;
-let menuVotes = [14, 9, 22, 7, 16];
+let menuVotes = [];
 const jours = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi'];
 const periodes = ['midi', 'soir'];
+const MENU_SOURCE_URL = 'menu-source.php';
+let feedbackWeekLabel = 'Semaine en cours';
+let voteWeekLabel = 'Semaine en cours';
 
-const menuItems = [
-  {emoji:'🥩', name:'Rougail de saucisses au porc', desc:'Riz bio au curcuma et poëlée wok'},
-  {emoji:'🍗', name:'Brochette de dinde tandoori', desc:'Semoule et poëlée chinoise'},
-  {emoji:'🌮', name:'Pizza au kebab', desc:'Salade verte'},
-  {emoji:'🍝', name:'Hamburger au boeuf', desc:'Frites et salade iceberg'},
-  {emoji:'🐟', name:'	Cordon bleu de dinde', desc:'Coquillettes bio et poëlée méridionale'},
-];
+let feedbackMenuItems = [];
+let voteMenuItems = [];
+
+function getFeedbackDishes() {
+  return feedbackMenuItems;
+}
+
+function getVoteDishes() {
+  return voteMenuItems;
+}
+
+function syncMenuWeekLabels() {
+  const menuTitle = document.getElementById('menuWeekTitle');
+  if (menuTitle) menuTitle.textContent = voteWeekLabel;
+
+  const staffWeek = document.getElementById('staffMenuWeekSub');
+  if (staffWeek) staffWeek.textContent = `Préférences des étudiants - ${voteWeekLabel}.`;
+
+  const dishWeekLabel = document.getElementById('dishWeekLabel');
+  if (dishWeekLabel) dishWeekLabel.textContent = `Note les plats de ${feedbackWeekLabel.toLowerCase()} (optionnel)`;
+}
+
+function ensureMenuVotesSize() {
+  const count = getVoteDishes().length;
+  if (menuVotes.length === count) return;
+  if (menuVotes.length < count) {
+    while (menuVotes.length < count) menuVotes.push(0);
+    return;
+  }
+  menuVotes = menuVotes.slice(0, count);
+}
+
+function normalizeDishList(rawList) {
+  if (!Array.isArray(rawList)) return [];
+  return rawList
+    .map((item) => ({
+      emoji: String(item?.emoji || '🍽️').trim() || '🍽️',
+      name: String(item?.name || '').trim(),
+      desc: String(item?.desc || '').trim(),
+      type: String(item?.type || 'non-vege').trim() === 'vege' ? 'vege' : 'non-vege',
+      meal: ['midi', 'soir'].includes(String(item?.meal || '').trim()) ? String(item.meal).trim() : 'unknown',
+      day: ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'].includes(String(item?.day || '').trim()) ? String(item.day).trim() : 'unknown'
+    }))
+    .filter((item) => item.name !== '');
+}
+
+function getDishType(item) {
+  return String(item?.type || 'non-vege') === 'vege' ? 'vege' : 'non-vege';
+}
+
+function splitDishIndexesByType(dishes) {
+  const groups = { 'non-vege': [], 'vege': [] };
+  dishes.forEach((dish, index) => {
+    groups[getDishType(dish)].push(index);
+  });
+  return groups;
+}
+
+function splitDishIndexesByMealAndType(dishes, selectedMeal) {
+  const groups = { 'non-vege': [], 'vege': [] };
+  dishes.forEach((dish, index) => {
+    const meal = String(dish?.meal || 'unknown');
+    if (meal !== selectedMeal && meal !== 'unknown') return;
+    groups[getDishType(dish)].push(index);
+  });
+  return groups;
+}
+
+function splitDishIndexesByMealDayAndType(dishes, selectedMeal) {
+  const orderedDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche', 'unknown'];
+  const out = {};
+  orderedDays.forEach((day) => {
+    out[day] = { 'non-vege': [], vege: [] };
+  });
+
+  dishes.forEach((dish, index) => {
+    const meal = String(dish?.meal || 'unknown');
+    if (meal !== selectedMeal && meal !== 'unknown') return;
+    const day = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'].includes(String(dish?.day || '').trim()) ? dish.day : 'unknown';
+    out[day][getDishType(dish)].push(index);
+  });
+
+  return out;
+}
+
+function dayLabel(day) {
+  const map = {
+    lundi: 'Lundi',
+    mardi: 'Mardi',
+    mercredi: 'Mercredi',
+    jeudi: 'Jeudi',
+    vendredi: 'Vendredi',
+    samedi: 'Samedi',
+    dimanche: 'Dimanche',
+    unknown: 'Autres'
+  };
+  return map[day] || 'Autres';
+}
+
+function getDishMeal(item) {
+  const meal = String(item?.meal || 'unknown');
+  return (meal === 'midi' || meal === 'soir') ? meal : 'unknown';
+}
+
+function setFeedbackMeal(meal) {
+  selectedFeedbackMeal = meal;
+  initDishFeedbackList();
+}
+
+function setVoteMeal(meal) {
+  selectedVoteMeal = meal;
+  initMenu();
+}
+
+function setStaffFeedbackMeal(meal) {
+  selectedStaffFeedbackMeal = meal;
+  initFeedbacks();
+}
+
+function buildWeekLabel(value) {
+  const match = String(value || '').match(/(\d{1,2})/);
+  return match ? `Semaine ${match[1]}` : 'Semaine en cours';
+}
+
+async function loadWeeklyDishes() {
+  try {
+    const [currentRes, nextRes] = await Promise.all([
+      fetch(`${MENU_SOURCE_URL}?week=current`, {cache: 'no-store'}),
+      fetch(`${MENU_SOURCE_URL}?week=next`, {cache: 'no-store'})
+    ]);
+
+    const currentPayload = currentRes.ok ? await currentRes.json() : null;
+    const nextPayload = nextRes.ok ? await nextRes.json() : null;
+
+    const currentDishes = normalizeDishList(currentPayload?.dishes);
+    const nextDishes = normalizeDishList(nextPayload?.dishes);
+
+    if (!currentDishes.length && !nextDishes.length) return;
+
+    feedbackMenuItems = currentDishes.length ? currentDishes : nextDishes;
+    voteMenuItems = nextDishes.length ? nextDishes : currentDishes;
+
+    const currentWeekRaw = typeof currentPayload?.weekLabel === 'string' ? currentPayload.weekLabel.trim() : '';
+    const nextWeekRaw = typeof nextPayload?.weekLabel === 'string' ? nextPayload.weekLabel.trim() : '';
+    feedbackWeekLabel = buildWeekLabel(currentWeekRaw || nextWeekRaw);
+    voteWeekLabel = buildWeekLabel(nextWeekRaw || currentWeekRaw);
+
+    ['midi', 'soir'].forEach((meal) => {
+      const idx = selMenuByMeal[meal];
+      if (idx === null || idx >= voteMenuItems.length) {
+        selMenuByMeal[meal] = null;
+        return;
+      }
+      const dishMeal = getDishMeal(voteMenuItems[idx]);
+      if (dishMeal !== meal && dishMeal !== 'unknown') {
+        selMenuByMeal[meal] = null;
+      }
+    });
+
+    ensureMenuVotesSize();
+    syncMenuWeekLabels();
+    initDishFeedbackList();
+    initMenu();
+    initStaffMenu();
+  } catch (_) {
+    // fallback silencieux sur la liste locale
+  }
+}
+
+function buildDishIdFromName(name) {
+  return String(name || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
 
 let feedbacksData = [];
 let recipesData = [];
@@ -503,18 +686,30 @@ function closeLogin() {
   document.getElementById('splash').style.display = 'flex';
 }
 
-function submitLogin() {
+async function submitLogin() {
   const u = document.getElementById('loginUser').value.trim().toLowerCase();
   const p = document.getElementById('loginPass').value;
-  const match = CREDS[role].find(c => c.user === u && c.pass === p);
-  if (!match) { document.getElementById('loginError').classList.add('show'); document.getElementById('loginPass').value = ''; return; }
-  loggedUser = match;
-  document.getElementById('loginScreen').classList.remove('visible');
-  document.getElementById('loginError').classList.remove('show');
-  enterApp();
+  try {
+    const res = await fetch('auth-login.php', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ role, user: u, pass: p })
+    });
+    const data = await res.json();
+    if (!res.ok || !data?.ok || !data?.user) throw new Error('auth_failed');
+    loggedUser = data.user;
+    role = data.role === 'staff' ? 'staff' : 'student';
+    document.getElementById('loginScreen').classList.remove('visible');
+    document.getElementById('loginError').classList.remove('show');
+    enterApp();
+  } catch (_) {
+    document.getElementById('loginError').classList.add('show');
+    document.getElementById('loginPass').value = '';
+  }
 }
 
 function logout() {
+  fetch('auth-logout.php', { method: 'POST' }).catch(() => {});
   loggedUser = null;
   document.getElementById('app').classList.remove('visible');
   document.getElementById('splash').style.display = 'flex';
@@ -527,8 +722,10 @@ function enterApp() {
   document.getElementById('studentNav').style.display = role === 'student' ? 'flex' : 'none';
   document.getElementById('staffNav').style.display = role === 'staff' ? 'flex' : 'none';
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  syncMenuWeekLabels();
   if (role === 'student') {
     document.getElementById('view-home-student').classList.add('active');
+    initDishFeedbackList();
     initMenu();
   } else {
     document.getElementById('view-home-staff').classList.add('active');
@@ -601,8 +798,70 @@ function submitPresence() {
 // ===== FEEDBACK =====
 function setStar(n) {
   selStar = n;
-  document.querySelectorAll('.star-btn').forEach((b, i) => b.classList.toggle('lit', i < n));
+  document.querySelectorAll('.overall-star-btn').forEach((b, i) => b.classList.toggle('lit', i < n));
 }
+
+function setDishStar(index, stars) {
+  dishRatings[index] = stars;
+  document.querySelectorAll(`#dishStars-${index} .dish-star-btn`).forEach((btn, i) => {
+    btn.classList.toggle('lit', i < stars);
+  });
+}
+
+function initDishFeedbackList() {
+  const list = document.getElementById('dishFeedbackList');
+  if (!list) return;
+  const dishes = getFeedbackDishes();
+  const groupsByDay = splitDishIndexesByMealDayAndType(dishes, selectedFeedbackMeal);
+  const orderedDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche', 'unknown'];
+
+  const mealTabs = `
+    <div class="feedback-meal-tabs">
+      <button class="feedback-meal-tab${selectedFeedbackMeal === 'midi' ? ' active' : ''}" onclick="setFeedbackMeal('midi')">Midi</button>
+      <button class="feedback-meal-tab${selectedFeedbackMeal === 'soir' ? ' active' : ''}" onclick="setFeedbackMeal('soir')">Soir</button>
+    </div>
+  `;
+
+  const renderTypeGroup = (indexes, type, title) => {
+    if (!indexes.length) {
+      return `<div class="dish-group"><div class="dish-group-title ${type}">${title}</div><div class="dish-empty">Aucun plat dans cette categorie.</div></div>`;
+    }
+
+    return `<div class="dish-group"><div class="dish-group-title ${type}">${title}</div>${indexes.map((index) => {
+      const item = dishes[index];
+      return `
+    <div class="dish-rating-item">
+      <div class="dish-rating-title">${item.emoji} ${item.name}</div>
+      <div class="dish-rating-desc">${item.desc}</div>
+      <div class="dish-stars-row" id="dishStars-${index}">
+        <button class="star-btn dish-star-btn" onclick="setDishStar(${index},1)">⭐</button>
+        <button class="star-btn dish-star-btn" onclick="setDishStar(${index},2)">⭐</button>
+        <button class="star-btn dish-star-btn" onclick="setDishStar(${index},3)">⭐</button>
+        <button class="star-btn dish-star-btn" onclick="setDishStar(${index},4)">⭐</button>
+        <button class="star-btn dish-star-btn" onclick="setDishStar(${index},5)">⭐</button>
+      </div>
+    </div>
+  `;
+    }).join('')}</div>`;
+  };
+
+  const dayBlocks = orderedDays.map((day) => {
+    const dayGroups = groupsByDay[day];
+    if (!dayGroups) return '';
+    const total = dayGroups['non-vege'].length + dayGroups.vege.length;
+    if (!total) return '';
+    return `
+      <div class="dish-group">
+        <div class="dish-group-title">${dayLabel(day)}</div>
+        ${renderTypeGroup(dayGroups['non-vege'], 'non-vege', 'Plats non vege')}
+        ${renderTypeGroup(dayGroups.vege, 'vege', 'Plats vege')}
+      </div>
+    `;
+  }).join('');
+
+  list.innerHTML = [mealTabs, dayBlocks || `<div class="dish-empty">Aucun plat pour ce service.</div>`].join('');
+}
+
 function selectTag(el, tag) {
   selTag = tag;
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
@@ -610,32 +869,60 @@ function selectTag(el, tag) {
 }
 async function submitFeedback() {
   const text = document.getElementById('feedbackText').value.trim();
-  const food = document.getElementById('foodInput').value.trim();
-  const name = document.getElementById('nameInput').value.trim();
+  const foodInput = document.getElementById('foodInput');
+  const nameInput = document.getElementById('nameInput');
+  const food = foodInput ? foodInput.value.trim() : '';
+  const name = nameInput ? nameInput.value.trim() : '';
+  const ratedDishIndexes = Object.keys(dishRatings).filter((key) => Number(dishRatings[key]) > 0);
 
-  if (!selStar && !text) { alert('Ajoute une note ou un commentaire !'); return; }
+  if (!selStar && !text && ratedDishIndexes.length === 0) { alert('Ajoute une note globale, un commentaire, ou note au moins un plat. Tu n\'as pas besoin de noter tous les plats.'); return; }
 
   try {
-    const res = await fetch('feedback.php', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        type: 'general',
-        stars: selStar,
-        cat: selTag,
-        food,
-        name,
-        text
-      })
-    });
+    const requests = [];
 
-    if (!res.ok) {
-      throw new Error('Erreur envoi feedback');
+    if (selStar || text) {
+      requests.push(fetch('feedback.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          type: 'general',
+          stars: selStar,
+          cat: selTag,
+          food,
+          name,
+          text
+        })
+      }));
     }
 
-    const saved = await res.json();
-    if (saved && saved.item) {
-      feedbacksData.unshift(saved.item);
+    const dishes = getFeedbackDishes();
+    ratedDishIndexes.forEach((key) => {
+      const idx = Number(key);
+      const dish = dishes[idx];
+      if (!dish) return;
+      const dishId = buildDishIdFromName(dish.name);
+      requests.push(fetch('feedback.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          type: 'dish',
+          stars: Number(dishRatings[key]),
+          cat: 'plat-semaine',
+          food: dish.name,
+          dishId: `${dishId}|${dish.meal || 'unknown'}|${dish.day || 'unknown'}`,
+          name,
+          text: ''
+        })
+      }));
+    });
+
+    const responses = await Promise.all(requests);
+    for (const res of responses) {
+      if (!res.ok) throw new Error('Erreur envoi feedback');
+      const saved = await res.json();
+      if (saved && saved.item) {
+        feedbacksData.unshift(saved.item);
+      }
     }
 
     computeRecipesFromFeedbacks();
@@ -654,21 +941,40 @@ async function submitFeedback() {
     return;
   }
 
-  const s = document.getElementById('feedbackSuccess');
   selStar = 0;
-  document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('lit'));
+  dishRatings = {};
+  document.querySelectorAll('.overall-star-btn').forEach(b => b.classList.remove('lit'));
+  document.querySelectorAll('.dish-star-btn').forEach(b => b.classList.remove('lit'));
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
   document.getElementById('feedbackText').value = '';
-  document.getElementById('foodInput').value = '';
-  document.getElementById('nameInput').value = '';
+  if (foodInput) foodInput.value = '';
+  if (nameInput) nameInput.value = '';
   selTag = '';
 }
 
 // ===== MENU (student — AUCUN chiffre de vote affiché) =====
 function initMenu() {
   const c = document.getElementById('menuOptions');
-  c.innerHTML = menuItems.map((item, i) => `
-    <div class="menu-option${selMenu===i?' selected':''}${menuVoted?' voted-done':''}" onclick="${menuVoted?'':'selectMenu('+i+')'}" >
+  const dishes = getVoteDishes();
+  const groupsByDay = splitDishIndexesByMealDayAndType(dishes, selectedVoteMeal);
+  const orderedDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche', 'unknown'];
+
+  const mealTabs = `
+    <div class="feedback-meal-tabs">
+      <button class="feedback-meal-tab${selectedVoteMeal === 'midi' ? ' active' : ''}" onclick="setVoteMeal('midi')">Midi</button>
+      <button class="feedback-meal-tab${selectedVoteMeal === 'soir' ? ' active' : ''}" onclick="setVoteMeal('soir')">Soir</button>
+    </div>
+  `;
+
+  const renderMenuGroup = (indexes, type, title) => {
+    if (!indexes.length) {
+      return `<div class="dish-group"><div class="dish-group-title ${type}">${title}</div><div class="dish-empty">Aucun plat dans cette categorie.</div></div>`;
+    }
+
+    return `<div class="dish-group"><div class="dish-group-title ${type}">${title}</div>${indexes.map((i) => {
+      const item = dishes[i];
+      return `
+    <div class="menu-option${selMenuByMeal[selectedVoteMeal]===i?' selected':''}${menuVoted?' voted-done':''}" onclick="${menuVoted?'':'selectMenu('+i+')'}" >
       <div class="menu-emoji">${item.emoji}</div>
       <div class="menu-info">
         <div class="menu-name">${item.name}</div>
@@ -676,17 +982,51 @@ function initMenu() {
       </div>
       <div class="menu-check">✅</div>
     </div>
-  `).join('');
+  `;
+    }).join('')}</div>`;
+  };
+
+  const dayBlocks = orderedDays.map((day) => {
+    const dayGroups = groupsByDay[day];
+    if (!dayGroups) return '';
+    const total = dayGroups['non-vege'].length + dayGroups.vege.length;
+    if (!total) return '';
+    return `
+      <div class="dish-group">
+        <div class="dish-group-title">${dayLabel(day)}</div>
+        ${renderMenuGroup(dayGroups['non-vege'], 'non-vege', 'Plats non vege')}
+        ${renderMenuGroup(dayGroups.vege, 'vege', 'Plats vege')}
+      </div>
+    `;
+  }).join('');
+
+  const selectedMidiDish = (selMenuByMeal.midi !== null && dishes[selMenuByMeal.midi]) ? dishes[selMenuByMeal.midi].name : null;
+  const selectedSoirDish = (selMenuByMeal.soir !== null && dishes[selMenuByMeal.soir]) ? dishes[selMenuByMeal.soir].name : null;
+  const selectedMidiLabel = selectedMidiDish ? `"${selectedMidiDish}"` : 'aucun';
+  const selectedSoirLabel = selectedSoirDish ? `"${selectedSoirDish}"` : 'aucun';
+  const voteHint = menuVoted
+    ? `<div class="dish-empty" style="margin-top:.6rem">Vote enregistré: midi ${selectedMidiLabel}, soir ${selectedSoirLabel}.</div>`
+    : `<div class="dish-empty" style="margin-top:.6rem">Sélection actuelle: midi ${selectedMidiLabel}, soir ${selectedSoirLabel}. Tu peux voter pour 1 plat le midi et 1 le soir (au moins 1 choix requis).</div>`;
+
+  c.innerHTML = [mealTabs, dayBlocks || `<div class="dish-empty">Aucun plat pour ce service.</div>`, voteHint].join('');
   document.getElementById('menuVoteBtn').style.display = menuVoted ? 'none' : 'block';
 }
 function selectMenu(i) {
   if (menuVoted) return;
-  selMenu = i;
-  document.querySelectorAll('.menu-option').forEach((el, idx) => el.classList.toggle('selected', idx===i));
+  selMenuByMeal[selectedVoteMeal] = i;
+  initMenu();
 }
 function submitMenuVote() {
-  if (selMenu === null) { alert('Sélectionne un plat !'); return; }
-  menuVotes[selMenu]++;
+  const selectedIndexes = [selMenuByMeal.midi, selMenuByMeal.soir].filter((idx) => idx !== null);
+  if (!selectedIndexes.length) {
+    alert('Sélectionne au moins un plat (midi ou soir) !');
+    return;
+  }
+
+  [...new Set(selectedIndexes)].forEach((idx) => {
+    menuVotes[idx]++;
+  });
+
   menuVoted = true;
   initMenu();
   initStaffMenu();
@@ -698,10 +1038,12 @@ function submitMenuVote() {
 function initStaffMenu() {
   const c = document.getElementById('staffMenuList');
   if (!c) return;
+  ensureMenuVotesSize();
   const total = menuVotes.reduce((a,b)=>a+b,0);
-  const sorted = menuItems.map((item, i) => ({...item, votes:menuVotes[i], idx:i})).sort((a,b)=>b.votes-a.votes);
+  const dishes = getVoteDishes();
+  const sorted = dishes.map((item, i) => ({...item, votes:menuVotes[i], idx:i})).sort((a,b)=>b.votes-a.votes);
   c.innerHTML = sorted.map((item, rank) => {
-    const pct = Math.round(item.votes/total*100);
+    const pct = total > 0 ? Math.round(item.votes/total*100) : 0;
     return `<div class="staff-menu-item">
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:${rank===0?'var(--accent2)':'var(--text2)'};min-width:1.5rem">#${rank+1}</div>
       <div style="font-size:1.6rem;min-width:2rem;text-align:center">${item.emoji}</div>
@@ -754,6 +1096,30 @@ async function loadStatsData() {
     // garde les données démo si stats.json n'est pas accessible
   }
 }
+
+async function resetPresenceStats() {
+  const ok = window.confirm('Confirmer la remise a zero des presences ?');
+  if (!ok) return;
+
+  const msg = document.getElementById('presenceResetMsg');
+  try {
+    const res = await fetch('reset-stats.php', { method: 'POST' });
+    if (!res.ok) throw new Error('reset failed');
+    await loadStatsData();
+    if (msg) {
+      msg.textContent = '✅ Présences remises à zéro.';
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 3500);
+    }
+  } catch (_) {
+    if (msg) {
+      msg.textContent = '⚠️ Réinitialisation impossible pour le moment.';
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 4000);
+    }
+  }
+}
+
 function initDayBars(week='current') {
   const data = dayData[week];
   const maxV = Math.max(...data.flatMap(d=>[d.midi,d.soir]));
@@ -799,6 +1165,54 @@ function normalizeFoodName(name) {
     .replace(/^./, c => c.toUpperCase());
 }
 
+function getMealFromDishId(dishId) {
+  const id = String(dishId || '').toLowerCase();
+  const pipeParts = id.split('|');
+  if (pipeParts.length >= 3) {
+    const meal = pipeParts[pipeParts.length - 2];
+    if (meal === 'midi' || meal === 'soir') return meal;
+  }
+  if (id.endsWith('-midi')) return 'midi';
+  if (id.endsWith('-soir')) return 'soir';
+  return 'unknown';
+}
+
+function getDayFromDishId(dishId) {
+  const id = String(dishId || '').toLowerCase();
+  const validDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+  const pipeParts = id.split('|');
+  if (pipeParts.length >= 3) {
+    const day = pipeParts[pipeParts.length - 1];
+    if (validDays.includes(day)) return day;
+  }
+  return 'unknown';
+}
+
+function getFeedbackDishMeta(item) {
+  if ((item?.type || 'general') !== 'dish') {
+    return {meal: 'general', type: 'general', day: 'general'};
+  }
+
+  const mealFromId = getMealFromDishId(item?.dishId);
+  const dayFromId = getDayFromDishId(item?.dishId);
+  const foodKey = normalizeFoodName(item?.food || '');
+  const dishes = getFeedbackDishes();
+
+  const matchedDish = dishes.find((dish) => {
+    if (normalizeFoodName(dish?.name || '') !== foodKey) return false;
+    if (mealFromId === 'midi' || mealFromId === 'soir') {
+      if (dish?.meal !== mealFromId) return false;
+    }
+    if (dayFromId !== 'unknown') return dish?.day === dayFromId;
+    return true;
+  });
+
+  const meal = (mealFromId === 'midi' || mealFromId === 'soir') ? mealFromId : (matchedDish?.meal || 'unknown');
+  const day = (dayFromId !== 'unknown') ? dayFromId : (matchedDish?.day || 'unknown');
+  const type = matchedDish?.type === 'vege' ? 'vege' : 'non-vege';
+  return {meal, type, day};
+}
+
 function computeRecipesFromFeedbacks() {
   const byFood = {};
   feedbacksData.forEach((item) => {
@@ -823,7 +1237,7 @@ function computeRecipesFromFeedbacks() {
 
 async function loadFeedbackData() {
   try {
-    const res = await fetch('feedback.php?type=general', {cache: 'no-store'});
+    const res = await fetch('feedback.php', {cache: 'no-store'});
     if (!res.ok) return;
     const data = await res.json();
     if (!Array.isArray(data)) return;
@@ -842,13 +1256,67 @@ function initFeedbacks() {
     list.innerHTML = `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucun feedback pour l'instant.</div></div>`;
     return;
   }
-  list.innerHTML = feedbacksData.map(f => `
+
+  const tabs = `
+    <div class="feedback-meal-tabs" style="margin-bottom:1rem">
+      <button class="feedback-meal-tab${selectedStaffFeedbackMeal === 'midi' ? ' active' : ''}" onclick="setStaffFeedbackMeal('midi')">Midi</button>
+      <button class="feedback-meal-tab${selectedStaffFeedbackMeal === 'soir' ? ' active' : ''}" onclick="setStaffFeedbackMeal('soir')">Soir</button>
+    </div>
+  `;
+
+  const orderedDays = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche', 'unknown'];
+  const groupedByDay = {};
+  orderedDays.forEach((day) => {
+    groupedByDay[day] = { 'non-vege': [], vege: [] };
+  });
+  const generalItems = [];
+
+  feedbacksData.forEach((item) => {
+    const meta = getFeedbackDishMeta(item);
+    const keep = meta.meal === selectedStaffFeedbackMeal || meta.meal === 'general' || meta.meal === 'unknown';
+    if (!keep) return;
+    if (meta.type === 'general') {
+      generalItems.push(item);
+      return;
+    }
+    const day = orderedDays.includes(meta.day) ? meta.day : 'unknown';
+    if (meta.type === 'vege') groupedByDay[day].vege.push(item);
+    else groupedByDay[day]['non-vege'].push(item);
+  });
+
+  const renderItems = (items) => items.map(f => `
     <div class="feedback-item">
       <div class="feedback-stars">${f.stars > 0 ? '⭐'.repeat(f.stars) : 'Sans note'}</div>
       ${f.food?`<div style="font-size:.78rem;color:var(--accent2);margin-bottom:.3rem">🍽 ${escapeHtml(f.food)}</div>`:''}
       ${f.text?`<div class="feedback-text">${escapeHtml(f.text)}</div>`:''}
       <div class="feedback-meta">${escapeHtml(f.name || 'Anonyme')} • ${f.cat?`[${escapeHtml(f.cat)}]  `:''}${escapeHtml(formatFeedbackTime(f.time))}</div>
     </div>`).join('');
+
+  const renderGroup = (title, cls, items) => {
+    if (!items.length) return '';
+    return `<div class="dish-group"><div class="dish-group-title ${cls}">${title}</div>${renderItems(items)}</div>`;
+  };
+
+  const dayBlocks = orderedDays.map((day) => {
+    const dayGroups = groupedByDay[day];
+    if (!dayGroups) return '';
+    const total = dayGroups['non-vege'].length + dayGroups.vege.length;
+    if (!total) return '';
+    return `
+      <div class="dish-group">
+        <div class="dish-group-title">${dayLabel(day)}</div>
+        ${renderGroup('Plats non vege', 'non-vege', dayGroups['non-vege'])}
+        ${renderGroup('Plats vege', 'vege', dayGroups.vege)}
+      </div>
+    `;
+  }).join('');
+
+  const content = [
+    dayBlocks,
+    renderGroup('Avis generaux', 'general', generalItems)
+  ].join('');
+
+  list.innerHTML = tabs + (content || `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucun feedback pour ce service.</div></div>`);
 }
 
 function initRecipes() {
@@ -871,6 +1339,8 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+syncMenuWeekLabels();
+loadWeeklyDishes();
 loadStatsData();
 </script>
 </body>
