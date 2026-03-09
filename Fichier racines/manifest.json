@@ -1,7 +1,7 @@
 {
-  "short_name": "RAK Poll",
-  "name": "Sondage RAK - Anti-Gaspillage",
-  "description": "Application de prévision des repas pour le RAK",
+  "short_name": "CROUS Poll",
+  "name": "Sondage CROUS - Anti-Gaspillage",
+  "description": "Application de prévision des repas pour le CROUS",
   "start_url": "./rak-canteen-pwa.html",
   "scope": "./",
   "display": "standalone",

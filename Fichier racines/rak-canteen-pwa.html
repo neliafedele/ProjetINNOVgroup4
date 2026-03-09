@@ -3,18 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#1a1a2e">
-<meta name="description" content="RAK Cantine - App étudiants et personnel">
-<title>RAK Cantine</title>
+<meta name="theme-color" content="#b61e2d">
+<meta name="description" content="CROUS Cantine - App étudiants et personnel">
+<title>CROUS Cantine</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d0f1a; --bg2: #141626; --bg3: #1c1f35; --card: #1e2238;
-    --accent: #ff6b35; --accent2: #ffd166; --accent3: #06d6a0; --blue: #4cc9f0;
-    --text: #f0f2ff; --text2: #9da5cc; --border: rgba(255,255,255,0.08); --radius: 16px;
+    --bg: #fff7f7; --bg2: #ffeaea; --bg3: #fff1f1; --card: #ffffff;
+    --accent: #b61e2d; --accent2: #e03a47; --accent3: #8f1722; --blue: #c92a38;
+    --text: #2b1114; --text2: #8f4b52; --border: rgba(182,30,45,0.18); --radius: 16px;
+    --presence-midi: #d62828;
+    --presence-soir: #1f4f8f;
+    --presence-both: #6a2db8;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; overflow-x: hidden; }
@@ -22,8 +25,8 @@
   /* SPLASH */
   #splash {
     min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;
-    background: radial-gradient(ellipse at 30% 20%, rgba(255,107,53,0.15) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 80%, rgba(76,201,240,0.1) 0%, transparent 50%), var(--bg);
+    background: radial-gradient(ellipse at 30% 20%, rgba(182,30,45,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(224,58,71,0.12) 0%, transparent 50%), var(--bg);
   }
   .splash-logo { font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 0.3rem; }
   .splash-logo span { color: var(--accent); }
@@ -36,7 +39,7 @@
   }
   .role-card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.3s; }
   .role-card.student::before { background: radial-gradient(circle at 50% 0%, rgba(255,107,53,0.2) 0%, transparent 70%); }
-  .role-card.staff::before { background: radial-gradient(circle at 50% 0%, rgba(6,214,160,0.2) 0%, transparent 70%); }
+  .role-card.staff::before { background: radial-gradient(circle at 50% 0%, rgba(143,23,34,0.18) 0%, transparent 70%); }
   .role-card:hover { transform: translateY(-4px); }
   .role-card:hover::before { opacity: 1; }
   .role-card.student:hover { border-color: var(--accent); }
@@ -48,8 +51,8 @@
   /* LOGIN */
   #loginScreen {
     display: none; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;
-    background: radial-gradient(ellipse at 60% 30%, rgba(76,201,240,0.1) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(255,107,53,0.1) 0%, transparent 50%), var(--bg);
+    background: radial-gradient(ellipse at 60% 30%, rgba(224,58,71,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(182,30,45,0.1) 0%, transparent 50%), var(--bg);
   }
   #loginScreen.visible { display: flex; }
   .login-box { width: 100%; max-width: 380px; }
@@ -65,7 +68,7 @@
     outline: none; transition: border-color .2s; margin-bottom: 1rem;
   }
   .login-input:focus { border-color: rgba(255,107,53,0.5); }
-  .login-input[type=password]:focus { border-color: rgba(76,201,240,0.5); }
+  .login-input[type=password]:focus { border-color: rgba(182,30,45,0.45); }
   .login-input::placeholder { color: var(--text2); }
   .login-error { background: rgba(255,80,80,0.1); border: 1px solid rgba(255,80,80,0.3); border-radius: 10px; padding: .75rem 1rem; color: #ff8080; font-size: .85rem; margin-bottom: 1rem; display: none; }
   .login-error.show { display: block; animation: fadeUp .2s ease; }
@@ -77,7 +80,7 @@
   #app.visible { display: flex; }
   .topbar {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(13,15,26,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+    background: rgba(255,247,247,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
     padding: 1rem 1.2rem; display: flex; align-items: center; justify-content: space-between;
   }
   .topbar-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; letter-spacing: -1px; }
@@ -97,7 +100,7 @@
   .main-content { flex: 1; padding: 1.5rem 1.2rem; max-width: 680px; margin: 0 auto; width: 100%; }
 
   .bottom-nav {
-    position: sticky; bottom: 0; background: rgba(20,22,38,0.95); backdrop-filter: blur(20px);
+    position: sticky; bottom: 0; background: rgba(255,247,247,0.95); backdrop-filter: blur(20px);
     border-top: 1px solid var(--border); display: flex; justify-content: space-around;
     padding: .7rem 0 calc(.7rem + env(safe-area-inset-bottom));
   }
@@ -121,13 +124,13 @@
   .day-btn { aspect-ratio:1; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--bg3); border:1.5px solid var(--border); border-radius:12px; cursor:pointer; font-size:.7rem; font-weight:600; color:var(--text2); transition:all .2s; gap:2px; font-family:'DM Sans',sans-serif; }
   .day-btn .day-num { font-size:1.1rem; font-weight:700; color:var(--text); }
   .day-btn:hover { border-color:var(--accent); background:rgba(255,107,53,0.08); }
-  .day-btn.selected-midi { background:rgba(255,107,53,0.15); border-color:var(--accent); color:var(--accent); }
-  .day-btn.selected-soir { background:rgba(76,201,240,0.15); border-color:var(--blue); color:var(--blue); }
-  .day-btn.selected-both { background:rgba(255,209,102,0.15); border-color:var(--accent2); color:var(--accent2); }
+  .day-btn.selected-midi { background:rgba(214,40,40,0.16); border-color:var(--presence-midi); color:var(--presence-midi); }
+  .day-btn.selected-soir { background:rgba(31,79,143,0.16); border-color:var(--presence-soir); color:var(--presence-soir); }
+  .day-btn.selected-both { background:rgba(106,45,184,0.16); border-color:var(--presence-both); color:var(--presence-both); }
   .meal-toggle { display:flex; gap:.5rem; margin-bottom:1.2rem; }
   .toggle-pill { flex:1; padding:.6rem; border-radius:10px; border:1.5px solid var(--border); background:var(--bg3); color:var(--text2); cursor:pointer; font-family:'DM Sans',sans-serif; font-size:.85rem; font-weight:500; transition:all .2s; text-align:center; }
-  .toggle-pill.active-midi { background:rgba(255,107,53,0.15); border-color:var(--accent); color:var(--accent); }
-  .toggle-pill.active-soir { background:rgba(76,201,240,0.15); border-color:var(--blue); color:var(--blue); }
+  .toggle-pill.active-midi { background:rgba(214,40,40,0.16); border-color:var(--presence-midi); color:var(--presence-midi); }
+  .toggle-pill.active-soir { background:rgba(31,79,143,0.16); border-color:var(--presence-soir); color:var(--presence-soir); }
 
   /* FEEDBACK */
   .rating-row { display:flex; gap:.5rem; margin:.5rem 0 1rem; }
@@ -179,9 +182,9 @@
   .btn { width:100%; padding:.95rem; border-radius:var(--radius); font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; border:none; cursor:pointer; transition:all .2s; margin-top:.5rem; }
   .btn-primary { background:var(--accent); color:white; }
   .btn-primary:hover { background:#ff8557; transform:translateY(-2px); }
-  .btn-blue { background:var(--blue); color:#0d0f1a; }
+  .btn-blue { background:var(--blue); color:#ffffff; }
   .btn-blue:hover { transform:translateY(-2px); }
-  .btn-yellow { background:var(--accent2); color:#0d0f1a; }
+  .btn-yellow { background:var(--accent2); color:#ffffff; }
   .btn-yellow:hover { transform:translateY(-2px); }
 
   /* SUCCESS */
@@ -204,14 +207,30 @@
   .bar-label { font-size:.8rem; min-width:70px; color:var(--text2); }
   .bar-track { flex:1; height:20px; background:var(--bg3); border-radius:6px; overflow:hidden; }
   .bar-fill { height:100%; border-radius:6px; display:flex; align-items:center; padding-left:.5rem; font-size:.75rem; font-weight:600; }
-  .bar-fill-orange { background:linear-gradient(90deg,var(--accent),#ff8557); }
-  .bar-fill-blue { background:linear-gradient(90deg,var(--blue),#7dd3fc); color:#0d0f1a; }
+  .bar-fill-orange { background:linear-gradient(90deg,var(--presence-midi),#ef4444); }
+  .bar-fill-blue { background:linear-gradient(90deg,var(--presence-soir),#3b82f6); color:#ffffff; }
 
   /* FEEDBACKS */
   .feedback-item { background:var(--bg3); border-radius:12px; padding:.9rem 1rem; margin-bottom:.7rem; border-left:3px solid var(--accent3); }
   .feedback-stars { color:var(--accent2); font-size:.85rem; margin-bottom:.3rem; }
   .feedback-text { font-size:.88rem; line-height:1.5; }
   .feedback-meta { color:var(--text2); font-size:.75rem; margin-top:.4rem; }
+  .feedback-dashboard { margin-bottom: 1rem; }
+  .feedback-kpi-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.6rem; margin:.6rem 0 .9rem; }
+  .feedback-kpi { background:var(--bg3); border:1px solid var(--border); border-radius:10px; padding:.7rem .6rem; text-align:center; }
+  .feedback-kpi-num { font-family:'Syne',sans-serif; font-weight:800; font-size:1.15rem; color:var(--accent); }
+  .feedback-kpi-label { font-size:.72rem; color:var(--text2); margin-top:.1rem; }
+  .feedback-chart-title { font-size:.78rem; color:var(--text2); margin-bottom:.45rem; }
+  .feedback-chart-row { display:flex; align-items:center; gap:.55rem; margin-bottom:.35rem; }
+  .feedback-chart-label { min-width:34px; font-size:.74rem; color:var(--text2); }
+  .feedback-chart-track { flex:1; height:12px; background:var(--bg3); border-radius:999px; overflow:hidden; border:1px solid var(--border); }
+  .feedback-chart-fill { height:100%; background:linear-gradient(90deg,var(--accent),var(--accent2)); border-radius:999px; }
+  .feedback-chart-value { min-width:22px; text-align:right; font-size:.74rem; color:var(--text2); }
+  .feedback-chart-layout { display:flex; gap:.8rem; align-items:center; margin-top:.35rem; }
+  .feedback-pie-wrap { width:132px; min-width:132px; height:132px; background:var(--bg3); border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; }
+  .feedback-pie-svg { width:108px; height:108px; }
+  .feedback-pie-center { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; fill:var(--text); }
+  .feedback-pie-sub { font-size:.56rem; fill:var(--text2); }
 
   /* RECIPES */
   .recipe-item { display:flex; align-items:center; gap:1rem; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:.9rem 1rem; margin-bottom:.7rem; }
@@ -220,7 +239,7 @@
   .recipe-score { color:var(--accent2); font-size:.85rem; font-weight:600; }
 
   .dot-pulse { display:inline-flex; align-items:center; gap:4px; margin-left:.5rem; }
-  .dot-pulse span { width:5px; height:5px; border-radius:50%; background:var(--accent3); animation:pulse 1.4s ease-in-out infinite; }
+  .dot-pulse span { width:5px; height:5px; border-radius:50%; background:var(--accent); animation:pulse 1.4s ease-in-out infinite; }
   .dot-pulse span:nth-child(2) { animation-delay:.2s; }
   .dot-pulse span:nth-child(3) { animation-delay:.4s; }
   @keyframes pulse { 0%,80%,100% { opacity:.3; transform:scale(.8); } 40% { opacity:1; transform:scale(1); } }
@@ -236,7 +255,7 @@
 
 <!-- SPLASH -->
 <div id="splash">
-  <div class="splash-logo">R<span>A</span>K</div>
+  <div class="splash-logo">C<span>R</span>OUS</div>
   <div class="splash-sub">Restaurant Universitaire</div>
   <div class="role-grid">
     <div class="role-card student" onclick="openLogin('student')">
@@ -257,9 +276,9 @@
   <div class="login-box">
     <button class="login-back" onclick="closeLogin()">← Retour</button>
     <div id="loginRoleBadge" class="login-role-badge"></div>
-    <div class="login-title">Connexion RAK</div>
-    <div class="login-sub">Utilise tes identifiants RAK pour accéder à l'application.</div>
-    <label class="login-label">Identifiant RAK</label>
+    <div class="login-title">Connexion CROUS</div>
+    <div class="login-sub">Utilise tes identifiants CROUS pour accéder à l'application.</div>
+    <label class="login-label">Identifiant CROUS</label>
     <input class="login-input" type="text" id="loginUser" placeholder="prenom.nom" autocomplete="username">
     <label class="login-label">Mot de passe</label>
     <input class="login-input" type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')submitLogin()">
@@ -276,7 +295,7 @@
 <div id="app">
   <div class="topbar">
     <div class="user-tag">👋 <b id="topUsername"></b></div>
-    <div class="topbar-logo">R<span>A</span>K</div>
+    <div class="topbar-logo">C<span>R</span>OUS</div>
     <div class="topbar-actions">
       <button class="refresh-btn" id="staffRefreshBtn" onclick="refreshStaffData()" title="Rafraîchir les données" style="display:none">↻ Rafraîchir</button>
       <button class="logout-btn" onclick="logout()" title="Se déconnecter">⏻</button>
@@ -288,7 +307,7 @@
     <!-- ======= STUDENT ======= -->
     <div class="view active" id="view-home-student">
       <div class="section-title">Bonjour 👋</div>
-      <p class="section-sub">Participe à la vie de la cantine du RAK et aide-nous à améliorer tes repas.</p>
+      <p class="section-sub">Participe à la vie de la cantine du CROUS et aide-nous à améliorer tes repas.</p>
       <div class="card" style="border-color:rgba(255,107,53,0.3);cursor:pointer" onclick="showView('view-presence')">
         <div style="display:flex;align-items:center;gap:1rem">
           <div style="font-size:2rem">📅</div>
@@ -307,6 +326,13 @@
         <div style="display:flex;align-items:center;gap:1rem">
           <div style="font-size:2rem">🍽️</div>
           <div><div class="card-title" style="margin:0 0 .2rem">Vote menu semaine pro</div><div style="color:var(--text2);font-size:.82rem">Choisis ton plat préféré</div></div>
+          <div style="margin-left:auto;color:var(--text2)">→</div>
+        </div>
+      </div>
+      <div class="card" style="border-color:rgba(6,214,160,0.3);cursor:pointer" onclick="showView('view-classement')">
+        <div style="display:flex;align-items:center;gap:1rem">
+          <div style="font-size:2rem">🥇</div>
+          <div><div class="card-title" style="margin:0 0 .2rem">Classement des sondages</div><div style="color:var(--text2);font-size:.82rem">Vois qui participe le plus</div></div>
           <div style="margin-left:auto;color:var(--text2)">→</div>
         </div>
       </div>
@@ -331,9 +357,9 @@
           <div class="day-btn" data-day="4" onclick="toggleDay(4)"><span class="day-num">Ve</span></div>
         </div>
         <div style="display:flex;gap:.8rem;font-size:.75rem;color:var(--text2);margin-bottom:1rem">
-          <span><span style="color:var(--accent)">■</span> Midi</span>
-          <span><span style="color:var(--blue)">■</span> Soir</span>
-          <span><span style="color:var(--accent2)">■</span> Les deux</span>
+          <span><span style="color:var(--presence-midi)">■</span> Midi</span>
+          <span><span style="color:var(--presence-soir)">■</span> Soir</span>
+          <span><span style="color:var(--presence-both)">■</span> Les deux</span>
         </div>
         <button class="btn btn-primary" onclick="submitPresence()">Confirmer ma présence</button>
         <div class="success-msg" id="presenceSuccess">✅ Présence enregistrée ! Merci.</div>
@@ -353,8 +379,12 @@
           <button class="star-btn overall-star-btn" onclick="setStar(4)">⭐</button>
           <button class="star-btn overall-star-btn" onclick="setStar(5)">⭐</button>
         </div>
+        <div class="label">Commentaire sur les entrees (optionnel)</div>
+        <textarea class="textarea" id="feedbackStarterText" placeholder="Ton retour sur les entrees..."></textarea>
         <div class="label" id="dishWeekLabel">Note les plats de la semaine (optionnel)</div>
         <div id="dishFeedbackList" class="dish-rating-list"></div>
+        <div class="label">Commentaire sur les desserts (optionnel)</div>
+        <textarea class="textarea" id="feedbackDessertText" placeholder="Ton retour sur les desserts..."></textarea>
         <div class="label">Commentaire (optionnel)</div>
         <textarea class="textarea" id="feedbackText" placeholder="Dis-nous ce que tu as pensé…"></textarea>
         <button class="btn btn-blue" onclick="submitFeedback()">Envoyer mon avis</button>
@@ -402,6 +432,12 @@
         <button class="btn btn-primary" style="margin-top:1rem" onclick="resetPresenceStats()">Réinitialiser les présences</button>
         <div class="success-msg" id="presenceResetMsg">✅ Présences remises à zéro.</div>
       </div>
+      <div class="card">
+        <div class="card-title">Administration des retours</div>
+        <div style="color:var(--text2);font-size:.82rem;line-height:1.5">Remet à 0 les feedbacks enregistrés, les votes menu affichés et le classement des participations.</div>
+        <button class="btn btn-blue" style="margin-top:1rem" onclick="resetFeedbacksAndMenuVotes()">Remettre feedbacks et votes menu à 0</button>
+        <div class="success-msg" id="feedbackResetMsg">✅ Feedbacks, votes menu et classement remis à zéro.</div>
+      </div>
       <div class="card" onclick="showView('view-menu-staff')" style="cursor:pointer;border-color:rgba(255,209,102,0.3)">
         <div style="display:flex;align-items:center;justify-content:space-between">
           <div><div class="card-title" style="margin:0">📊 Résultats vote menu</div><div style="color:var(--text2);font-size:.82rem;margin-top:.2rem">Préférences des étudiants</div></div>
@@ -417,6 +453,12 @@
       <div class="card" onclick="showView('view-recipes')" style="cursor:pointer;margin-top:0;border-color:rgba(255,107,53,0.3)">
         <div style="display:flex;align-items:center;justify-content:space-between">
           <div><div class="card-title" style="margin:0">🏆 Recettes appréciées</div><div style="color:var(--text2);font-size:.82rem;margin-top:.2rem">Plats les mieux notés</div></div>
+          <div style="color:var(--text2)">→</div>
+        </div>
+      </div>
+      <div class="card" onclick="showView('view-classement')" style="cursor:pointer;margin-top:0;border-color:rgba(6,214,160,0.3)">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div><div class="card-title" style="margin:0">🥇 Classement sondages</div><div style="color:var(--text2);font-size:.82rem;margin-top:.2rem">Qui répond le plus ?</div></div>
           <div style="color:var(--text2)">→</div>
         </div>
       </div>
@@ -440,6 +482,12 @@
       <div id="recipeList"></div>
     </div>
 
+    <div class="view" id="view-classement">
+      <div class="section-title">🥇 Classement sondages</div>
+      <p class="section-sub">Étudiants les plus actifs sur la semaine en cours (présence, votes et feedbacks).</p>
+      <div id="rankingList"></div>
+    </div>
+
   </div><!-- /main-content -->
 
   <nav class="bottom-nav" id="studentNav">
@@ -447,6 +495,7 @@
     <button class="nav-btn" id="nav-presence" onclick="nav('view-presence','nav-presence')"><span class="icon">📅</span>Présence</button>
     <button class="nav-btn" id="nav-feedback" onclick="nav('view-feedback','nav-feedback')"><span class="icon">💬</span>Feedback</button>
     <button class="nav-btn" id="nav-menu" onclick="nav('view-menu','nav-menu')"><span class="icon">🍽️</span>Menu</button>
+    <button class="nav-btn" id="nav-classement-student" onclick="nav('view-classement','nav-classement-student')"><span class="icon">🥇</span>Classement</button>
   </nav>
 
   <nav class="bottom-nav" id="staffNav" style="display:none">
@@ -454,6 +503,7 @@
     <button class="nav-btn" id="nav-menu-staff" onclick="nav('view-menu-staff','nav-menu-staff','green')"><span class="icon">🍽️</span>Votes</button>
     <button class="nav-btn" id="nav-feedbacks" onclick="nav('view-feedbacks','nav-feedbacks','green')"><span class="icon">💬</span>Feedbacks</button>
     <button class="nav-btn" id="nav-recipes" onclick="nav('view-recipes','nav-recipes','green')"><span class="icon">🏆</span>Recettes</button>
+    <button class="nav-btn" id="nav-classement" onclick="nav('view-classement','nav-classement','green')"><span class="icon">🥇</span>Classement</button>
   </nav>
 </div>
 
@@ -466,8 +516,8 @@ const CREDS = {
     {user:'lucas.dupont',pass:'rak2025',name:'Lucas'},
   ],
   staff: [
-    {user:'personnel',pass:'rak2025',name:'Équipe RAK'},
-    {user:'chef.rak',pass:'rak2025',name:'Chef RAK'},
+    {user:'personnel',pass:'rak2025',name:'Équipe CROUS'},
+    {user:'chef.rak',pass:'rak2025',name:'Chef CROUS'},
   ]
 };
 
@@ -493,6 +543,7 @@ let voteWeekLabel = 'Semaine en cours';
 
 let feedbackMenuItems = [];
 let voteMenuItems = [];
+let participationData = [];
 
 function getFeedbackDishes() {
   return feedbackMenuItems;
@@ -739,10 +790,62 @@ function enterApp() {
     document.getElementById('view-home-student').classList.add('active');
     initDishFeedbackList();
     initMenu();
+    initClassement();
+    loadParticipationData();
+    maybeSendWeeklySurveyNotification();
   } else {
     document.getElementById('view-home-staff').classList.add('active');
-    initDayBars(); initFeedbacks(); initRecipes(); initStaffMenu();
+    initDayBars(); initFeedbacks(); initRecipes(); initStaffMenu(); initClassement();
     loadFeedbackData();
+    loadParticipationData();
+  }
+}
+
+function getIsoWeekKey(date = new Date()) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+  return `${d.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
+}
+
+async function maybeSendWeeklySurveyNotification() {
+  if (role !== 'student') return;
+  if (!('Notification' in window) || !('serviceWorker' in navigator)) return;
+
+  const now = new Date();
+  const isSunday = now.getDay() === 0;
+  if (!isSunday) return;
+
+  const weekKey = getIsoWeekKey(now);
+  const storageKey = `crous-weekly-survey-notif-${weekKey}`;
+  if (localStorage.getItem(storageKey) === 'sent') return;
+
+  if (Notification.permission === 'denied') return;
+
+  let permission = Notification.permission;
+  if (permission === 'default') {
+    try {
+      permission = await Notification.requestPermission();
+    } catch (_) {
+      return;
+    }
+  }
+  if (permission !== 'granted') return;
+
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    await registration.showNotification('Nouveau sondage CROUS', {
+      body: 'Le nouveau sondage de la semaine est disponible. Donne ton avis !',
+      icon: 'icons/icon-192.svg',
+      badge: 'icons/icon-192.svg',
+      tag: `crous-survey-${weekKey}`,
+      renotify: false
+    });
+    localStorage.setItem(storageKey, 'sent');
+  } catch (_) {
+    // echec silencieux: l'app reste utilisable
   }
 }
 
@@ -770,7 +873,8 @@ async function refreshStaffData() {
     await Promise.all([
       loadStatsData(),
       loadFeedbackData(),
-      loadWeeklyDishes()
+      loadWeeklyDishes(),
+      loadParticipationData()
     ]);
   } finally {
     if (refreshBtn) {
@@ -816,6 +920,7 @@ function submitPresence() {
     body: payload.toString()
   }).then(res => {
     if (!res.ok) throw new Error('Erreur envoi présence');
+    trackParticipation('presence', 1);
     const s = document.getElementById('presenceSuccess');
     s.textContent = '✅ Présence enregistrée ! Merci.';
     s.classList.add('show');
@@ -903,13 +1008,15 @@ function selectTag(el, tag) {
 }
 async function submitFeedback() {
   const text = document.getElementById('feedbackText').value.trim();
+  const starterText = document.getElementById('feedbackStarterText').value.trim();
+  const dessertText = document.getElementById('feedbackDessertText').value.trim();
   const foodInput = document.getElementById('foodInput');
   const nameInput = document.getElementById('nameInput');
   const food = foodInput ? foodInput.value.trim() : '';
-  const name = nameInput ? nameInput.value.trim() : '';
+  const name = (nameInput ? nameInput.value.trim() : '') || (loggedUser && loggedUser.name ? loggedUser.name : '');
   const ratedDishIndexes = Object.keys(dishRatings).filter((key) => Number(dishRatings[key]) > 0);
 
-  if (!selStar && !text && ratedDishIndexes.length === 0) { alert('Ajoute une note globale, un commentaire, ou note au moins un plat. Tu n\'as pas besoin de noter tous les plats.'); return; }
+  if (!selStar && !starterText && !dessertText && !text && ratedDishIndexes.length === 0) { alert('Ajoute une note globale, un commentaire, ou note au moins un plat. Tu n\'as pas besoin de noter tous les plats.'); return; }
 
   try {
     const requests = [];
@@ -925,6 +1032,36 @@ async function submitFeedback() {
           food,
           name,
           text
+        })
+      }));
+    }
+
+    if (starterText) {
+      requests.push(fetch('feedback.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          type: 'general',
+          stars: 0,
+          cat: 'entree',
+          food: '',
+          name,
+          text: starterText
+        })
+      }));
+    }
+
+    if (dessertText) {
+      requests.push(fetch('feedback.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          type: 'general',
+          stars: 0,
+          cat: 'dessert',
+          food: '',
+          name,
+          text: dessertText
         })
       }));
     }
@@ -962,6 +1099,8 @@ async function submitFeedback() {
     computeRecipesFromFeedbacks();
     initFeedbacks();
     initRecipes();
+    // 1 participation feedback par envoi de formulaire (compte hebdomadaire)
+    trackParticipation('feedback', 1);
 
     const s = document.getElementById('feedbackSuccess');
     s.textContent = '✅ Feedback envoyé ! Merci de ta contribution.';
@@ -981,6 +1120,8 @@ async function submitFeedback() {
   document.querySelectorAll('.dish-star-btn').forEach(b => b.classList.remove('lit'));
   document.querySelectorAll('#catTags .tag').forEach(t => t.classList.remove('selected'));
   document.getElementById('feedbackText').value = '';
+  document.getElementById('feedbackStarterText').value = '';
+  document.getElementById('feedbackDessertText').value = '';
   if (foodInput) foodInput.value = '';
   if (nameInput) nameInput.value = '';
   selTag = '';
@@ -1060,6 +1201,7 @@ function submitMenuVote() {
   [...new Set(selectedIndexes)].forEach((idx) => {
     menuVotes[idx]++;
   });
+  trackParticipation('menu_vote', 1);
 
   menuVoted = true;
   initMenu();
@@ -1091,6 +1233,81 @@ function initStaffMenu() {
       </div>
     </div>`;
   }).join('');
+}
+
+function getRankingTitle(total) {
+  if (total >= 50) return 'Champion';
+  if (total >= 40) return 'Diamant';
+  if (total >= 30) return 'Platine';
+  if (total >= 20) return 'Or';
+  if (total >= 10) return 'Argent';
+  return 'Bronze';
+}
+
+async function loadParticipationData() {
+  try {
+    const res = await fetch('participation.php', {cache: 'no-store'});
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!Array.isArray(data)) return;
+    participationData = data;
+    initClassement();
+  } catch (_) {
+    // garde l'affichage actuel si indisponible
+  }
+}
+
+async function trackParticipation(eventType, count) {
+  if (role !== 'student') return;
+  try {
+    await fetch('participation.php', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ event: eventType, count: Number(count) || 1 })
+    });
+  } catch (_) {
+    // suivi non bloquant
+  }
+}
+
+function initClassement() {
+  const list = document.getElementById('rankingList');
+  if (!list) return;
+
+  if (!Array.isArray(participationData) || participationData.length === 0) {
+    list.innerHTML = `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucune participation enregistree pour le moment.</div></div>`;
+    return;
+  }
+
+  const sorted = [...participationData].sort((a, b) => Number(b.total || 0) - Number(a.total || 0));
+  const isStudentView = role === 'student';
+  const visibleRows = isStudentView ? sorted.slice(0, 10) : sorted;
+
+  const rowsHtml = visibleRows.map((item, idx) => {
+    const name = escapeHtml(item.name || item.user || 'Anonyme');
+    const total = Number(item.total || 0);
+    const presence = Number(item.presence || 0);
+    const menuVotesCount = Number(item.menu_vote || 0);
+    const feedbackCount = Number(item.feedback || 0);
+    const badge = getRankingTitle(total);
+    const medal = idx === 0 ? '🥇' : (idx === 1 ? '🥈' : (idx === 2 ? '🥉' : '🏅'));
+
+    return `<div class="recipe-item">
+      <div class="recipe-rank ${idx < 3 ? 'top' : ''}">${medal}</div>
+      <div style="flex:1">
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem">${name}</div>
+        <div style="color:var(--text2);font-size:.78rem;margin-top:.2rem">${badge}</div>
+        <div style="color:var(--text2);font-size:.74rem;margin-top:.2rem">Presence: ${presence} · Vote menu: ${menuVotesCount} · Feedback: ${feedbackCount}</div>
+      </div>
+      <div class="recipe-score">${total} reponses</div>
+    </div>`;
+  }).join('');
+
+  const topHint = (isStudentView && sorted.length > 10)
+    ? `<div class="dish-empty" style="margin-bottom:.6rem">Affichage Top 10 des participants.</div>`
+    : '';
+
+  list.innerHTML = topHint + rowsHtml;
 }
 
 // ===== STAFF PRESENCE CHART =====
@@ -1154,6 +1371,40 @@ async function resetPresenceStats() {
   }
 }
 
+async function resetFeedbacksAndMenuVotes() {
+  const ok = window.confirm('Confirmer la remise a zero des feedbacks et des votes menu ?');
+  if (!ok) return;
+
+  const msg = document.getElementById('feedbackResetMsg');
+  try {
+    const res = await fetch('reset-feedbacks.php', { method: 'POST' });
+    if (!res.ok) throw new Error('reset failed');
+
+    feedbacksData = [];
+    recipesData = [];
+    menuVotes = menuVotes.map(() => 0);
+    menuVoted = false;
+    selMenuByMeal = { midi: null, soir: null };
+
+    initFeedbacks();
+    initRecipes();
+    initStaffMenu();
+    initMenu();
+
+    if (msg) {
+      msg.textContent = '✅ Feedbacks, votes menu et classement remis à zéro.';
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 3500);
+    }
+  } catch (_) {
+    if (msg) {
+      msg.textContent = '⚠️ Réinitialisation impossible pour le moment.';
+      msg.classList.add('show');
+      setTimeout(() => msg.classList.remove('show'), 4000);
+    }
+  }
+}
+
 function initDayBars(week='current') {
   const data = dayData[week];
   const maxV = Math.max(...data.flatMap(d=>[d.midi,d.soir]));
@@ -1165,7 +1416,7 @@ function initDayBars(week='current') {
         <div style="margin-bottom:3px"><div class="bar-track"><div class="bar-fill bar-fill-orange" style="width:${d.midi/maxV*100}%">${d.midi}</div></div></div>
         <div><div class="bar-track"><div class="bar-fill bar-fill-blue" style="width:${d.soir/maxV*100}%">${d.soir}</div></div></div>
       </div>
-    </div>`).join('') + `<div style="display:flex;gap:1rem;margin-top:.5rem;font-size:.72rem;color:var(--text2)"><span style="color:var(--accent)">■</span> Midi &nbsp;<span style="color:var(--blue)">■</span> Soir</div>`;
+    </div>`).join('') + `<div style="display:flex;gap:1rem;margin-top:.5rem;font-size:.72rem;color:var(--text2)"><span style="color:var(--presence-midi)">■</span> Midi &nbsp;<span style="color:var(--presence-soir)">■</span> Soir</div>`;
 }
 
 function escapeHtml(value) {
@@ -1304,11 +1555,13 @@ function initFeedbacks() {
     groupedByDay[day] = { 'non-vege': [], vege: [] };
   });
   const generalItems = [];
+  const visibleItems = [];
 
   feedbacksData.forEach((item) => {
     const meta = getFeedbackDishMeta(item);
     const keep = meta.meal === selectedStaffFeedbackMeal || meta.meal === 'general' || meta.meal === 'unknown';
     if (!keep) return;
+    visibleItems.push(item);
     if (meta.type === 'general') {
       generalItems.push(item);
       return;
@@ -1350,7 +1603,89 @@ function initFeedbacks() {
     renderGroup('Avis generaux', 'general', generalItems)
   ].join('');
 
-  list.innerHTML = tabs + (content || `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucun feedback pour ce service.</div></div>`);
+  const rated = visibleItems.filter((f) => Number(f.stars || 0) > 0);
+  const avg = rated.length ? (rated.reduce((sum, f) => sum + Number(f.stars || 0), 0) / rated.length) : 0;
+  const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  rated.forEach((f) => {
+    const s = Number(f.stars || 0);
+    if (distribution[s] !== undefined) distribution[s] += 1;
+  });
+  const maxBucket = Math.max(...Object.values(distribution), 1);
+  const totalRated = rated.length;
+
+  const toXY = (cx, cy, r, angleDeg) => {
+    const rad = (angleDeg * Math.PI) / 180;
+    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+  };
+
+  const buildSlicePath = (cx, cy, r, startDeg, endDeg) => {
+    const start = toXY(cx, cy, r, startDeg);
+    const end = toXY(cx, cy, r, endDeg);
+    const largeArc = endDeg - startDeg > 180 ? 1 : 0;
+    return `M ${cx} ${cy} L ${start.x.toFixed(3)} ${start.y.toFixed(3)} A ${r} ${r} 0 ${largeArc} 1 ${end.x.toFixed(3)} ${end.y.toFixed(3)} Z`;
+  };
+
+  const starColors = {
+    5: '#16a34a',
+    4: '#65a30d',
+    3: '#f59e0b',
+    2: '#f97316',
+    1: '#dc2626'
+  };
+
+  let startAngle = -90;
+  const pieSlices = [5, 4, 3, 2, 1].map((star) => {
+    const value = distribution[star];
+    if (!totalRated || value <= 0) return '';
+    const sweep = (value / totalRated) * 360;
+    const path = buildSlicePath(54, 54, 48, startAngle, startAngle + sweep);
+    startAngle += sweep;
+    return `<path d="${path}" fill="${starColors[star]}" />`;
+  }).join('');
+
+  const pieSvg = totalRated
+    ? `<svg class="feedback-pie-svg" viewBox="0 0 108 108" role="img" aria-label="Camembert des notes">
+         <circle cx="54" cy="54" r="48" fill="var(--card)" stroke="var(--border)" stroke-width="1" />
+         ${pieSlices}
+         <circle cx="54" cy="54" r="22" fill="var(--card)" stroke="var(--border)" stroke-width="1" />
+         <text x="54" y="53" text-anchor="middle" class="feedback-pie-center">${avg.toFixed(1)}</text>
+         <text x="54" y="65" text-anchor="middle" class="feedback-pie-sub">moy.</text>
+       </svg>`
+    : `<svg class="feedback-pie-svg" viewBox="0 0 108 108" role="img" aria-label="Camembert des notes">
+         <circle cx="54" cy="54" r="48" fill="var(--card)" stroke="var(--border)" stroke-width="1" />
+         <circle cx="54" cy="54" r="22" fill="var(--card)" stroke="var(--border)" stroke-width="1" />
+         <text x="54" y="53" text-anchor="middle" class="feedback-pie-center">0</text>
+         <text x="54" y="65" text-anchor="middle" class="feedback-pie-sub">note</text>
+       </svg>`;
+
+  const summary = `
+    <div class="card feedback-dashboard">
+      <div class="card-title" style="margin-bottom:.25rem">Vue rapide</div>
+      <div style="color:var(--text2);font-size:.76rem">Service sélectionné: ${selectedStaffFeedbackMeal === 'midi' ? 'Midi' : 'Soir'}</div>
+      <div class="feedback-kpi-grid">
+        <div class="feedback-kpi"><div class="feedback-kpi-num">${visibleItems.length}</div><div class="feedback-kpi-label">Feedbacks</div></div>
+        <div class="feedback-kpi"><div class="feedback-kpi-num">${avg.toFixed(1)}</div><div class="feedback-kpi-label">Note moyenne</div></div>
+        <div class="feedback-kpi"><div class="feedback-kpi-num">${generalItems.length}</div><div class="feedback-kpi-label">Avis généraux</div></div>
+      </div>
+      <div class="feedback-chart-layout">
+        <div class="feedback-pie-wrap">${pieSvg}</div>
+        <div style="flex:1">
+          <div class="feedback-chart-title">Diagramme de répartition des notes</div>
+          ${[5,4,3,2,1].map((star) => {
+            const value = distribution[star];
+            const width = Math.round((value / maxBucket) * 100);
+            return `<div class="feedback-chart-row">
+              <div class="feedback-chart-label">${star}⭐</div>
+              <div class="feedback-chart-track"><div class="feedback-chart-fill" style="width:${width}%;background:${starColors[star]}"></div></div>
+              <div class="feedback-chart-value">${value}</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+
+  list.innerHTML = tabs + summary + (content || `<div class="card" style="margin-bottom:0"><div style="color:var(--text2);font-size:.88rem">Aucun feedback pour ce service.</div></div>`);
 }
 
 function initRecipes() {

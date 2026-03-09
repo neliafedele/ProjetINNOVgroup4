@@ -33,7 +33,7 @@ if (!is_array($statsParJour)) {
             $total = array_sum($votes);
         ?>
             <div class="progress-container">
-                <h3>Résultats du RAK (<?php echo ucfirst($jour); ?> - <?php echo ucfirst($periode); ?>) :</h3>
+                <h3>Résultats du CROUS (<?php echo ucfirst($jour); ?> - <?php echo ucfirst($periode); ?>) :</h3>
 
                 <?php foreach ($votes as $choix => $quantite):
                     $pourcentage = ($total > 0) ? round(($quantite / $total) * 100) : 0;

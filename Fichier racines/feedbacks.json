@@ -1,2992 +1,342 @@
 [
     {
         "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
+        "stars": 1,
+        "name": "Étudiant",
         "cat": "plat-semaine",
-        "food": "Fajitas aux légumes et pois",
-        "dishId": "fajitas-aux-legumes-et-pois|midi|vendredi",
+        "food": "Curry au riz basmati bio et pois chiche",
+        "dishId": "curry-au-riz-basmati-bio-et-pois-chiche|midi|vendredi",
         "text": "",
-        "time": "2026-03-06 14:21:19"
+        "time": "2026-03-09 10:22:51"
     },
     {
         "type": "dish",
         "stars": 5,
-        "name": "Anonyme",
+        "name": "Étudiant",
         "cat": "plat-semaine",
-        "food": "Filet de saumon sauce béarnaise",
-        "dishId": "filet-de-saumon-sauce-bearnaise|midi|vendredi",
+        "food": "Filet de merlu au beurre blanc",
+        "dishId": "filet-de-merlu-au-beurre-blanc|midi|vendredi",
         "text": "",
-        "time": "2026-03-06 14:21:19"
+        "time": "2026-03-09 10:22:51"
     },
     {
         "type": "dish",
-        "stars": 4,
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Rosbeef sauce moutarde",
+        "dishId": "rosbeef-sauce-moutarde|midi|vendredi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 1,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Crêpe forestière et oeuf poché",
+        "dishId": "crepe-forestiere-et-oeuf-poche|midi|jeudi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Filet de poisson meunière - sauce à l'oseille",
+        "dishId": "filet-de-poisson-meuniere-sauce-a-l-oseille|midi|jeudi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Steak haché du boucher sauce 5 baies",
+        "dishId": "steak-hache-du-boucher-sauce-5-baies|midi|jeudi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 1,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Quiche aux champignons - brocolis et comté",
+        "dishId": "quiche-aux-champignons-brocolis-et-comte|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Filet de limande en croûte",
+        "dishId": "filet-de-limande-en-croute|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Haricot d'agneau",
+        "dishId": "haricot-d-agneau|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 1,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Tourte aux légumes d'hiver",
+        "dishId": "tourte-aux-legumes-d-hiver|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Filet de colin pané au citron",
+        "dishId": "filet-de-colin-pane-au-citron|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Sauté de porc au cidre et pommes",
+        "dishId": "saute-de-porc-au-cidre-et-pommes|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 1,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Tortellonnis ricotta et tomates séchées",
+        "dishId": "tortellonnis-ricotta-et-tomates-sechees|midi|lundi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Aiguillette de poulet tandoori",
+        "dishId": "aiguillette-de-poulet-tandoori|midi|lundi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Merguez grillées",
+        "dishId": "merguez-grillees|midi|lundi",
+        "text": "",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "general",
+        "stars": 0,
+        "name": "Étudiant",
+        "cat": "dessert",
+        "food": "",
+        "dishId": "",
+        "text": "Trop sucré",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "general",
+        "stars": 0,
+        "name": "Étudiant",
+        "cat": "entree",
+        "food": "",
+        "dishId": "",
+        "text": "Génial",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "general",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "",
+        "food": "",
+        "dishId": "",
+        "text": "Plat végé pas ouf dommage",
+        "time": "2026-03-09 10:22:51"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
         "name": "Anonyme",
         "cat": "plat-semaine",
-        "food": "Escalope de dinde crème",
-        "dishId": "escalope-de-dinde-creme|midi|vendredi",
+        "food": "Curry au riz basmati bio et pois chiche",
+        "dishId": "curry-au-riz-basmati-bio-et-pois-chiche|midi|vendredi",
         "text": "",
-        "time": "2026-03-06 14:21:19"
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Filet de merlu au beurre blanc",
+        "dishId": "filet-de-merlu-au-beurre-blanc|midi|vendredi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Rosbeef sauce moutarde",
+        "dishId": "rosbeef-sauce-moutarde|midi|vendredi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Filet de poisson meunière - sauce à l'oseille",
+        "dishId": "filet-de-poisson-meuniere-sauce-a-l-oseille|midi|jeudi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Quiche aux champignons - brocolis et comté",
+        "dishId": "quiche-aux-champignons-brocolis-et-comte|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Steak haché du boucher sauce 5 baies",
+        "dishId": "steak-hache-du-boucher-sauce-5-baies|midi|jeudi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Filet de limande en croûte",
+        "dishId": "filet-de-limande-en-croute|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Haricot d'agneau",
+        "dishId": "haricot-d-agneau|midi|mercredi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Tourte aux légumes d'hiver",
+        "dishId": "tourte-aux-legumes-d-hiver|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Filet de colin pané au citron",
+        "dishId": "filet-de-colin-pane-au-citron|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Anonyme",
+        "cat": "plat-semaine",
+        "food": "Sauté de porc au cidre et pommes",
+        "dishId": "saute-de-porc-au-cidre-et-pommes|midi|mardi",
+        "text": "",
+        "time": "2026-03-09 10:08:42"
     },
     {
         "type": "dish",
         "stars": 1,
         "name": "Anonyme",
         "cat": "plat-semaine",
-        "food": "Salade verte",
-        "dishId": "salade-verte|midi|jeudi",
+        "food": "Tortellonnis ricotta et tomates séchées",
+        "dishId": "tortellonnis-ricotta-et-tomates-sechees|midi|lundi",
         "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Aiguillette de poisson pané - sauce tartare",
-        "dishId": "aiguillette-de-poisson-pane-sauce-tartare|midi|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rôti de veau aux carottes et à l'orange",
-        "dishId": "roti-de-veau-aux-carottes-et-a-l-orange|midi|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
+        "time": "2026-03-09 10:08:42"
     },
     {
         "type": "dish",
         "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Lasagnes de légumes ou omelette bio forestière",
-        "dishId": "lasagnes-de-legumes-ou-omelette-bio-forestiere|midi|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Samoussa au boeuf ou rissolette de veau - sauce fromagère au comté",
-        "dishId": "samoussa-au-boeuf-ou-rissolette-de-veau-sauce-fromagere-au-comte|midi|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Lasagnes aux légumes d'hiver",
-        "dishId": "lasagnes-aux-legumes-d-hiver|midi|mardi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Jambon rôti aux herbes sauce miel et orange",
-        "dishId": "jambon-roti-aux-herbes-sauce-miel-et-orange|midi|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Samoussa au boeuf - concassé de tomates à l'ail",
-        "dishId": "samoussa-au-boeuf-concasse-de-tomates-a-l-ail|midi|mardi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Cassoulet (porc et canard)",
-        "dishId": "cassoulet-porc-et-canard|midi|mardi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Gratin de ratatouille à la polenta et reblochon",
-        "dishId": "gratin-de-ratatouille-a-la-polenta-et-reblochon|midi|lundi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Acras de morue - sauce aïoli",
-        "dishId": "acras-de-morue-sauce-aioli|midi|lundi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Goulash (boeuf paprika)",
-        "dishId": "goulash-boeuf-paprika|midi|lundi",
-        "text": "",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "LA TCHEEEAM",
-        "time": "2026-03-06 14:21:19"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
         "name": "Anonyme",
         "cat": "plat-semaine",
         "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
+        "dishId": "merguez-grillees|midi|lundi",
         "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
+        "time": "2026-03-09 10:08:42"
     },
     {
         "type": "dish",
         "stars": 3,
         "name": "Anonyme",
         "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
+        "food": "Aiguillette de poulet tandoori",
+        "dishId": "aiguillette-de-poulet-tandoori|midi|lundi",
         "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:34"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:33"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:32"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Brochette de dinde tandoori",
-        "dishId": "brochette-de-dinde-tandoori|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 2,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "Et merci",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail de saucisses de porc(fr)",
-        "dishId": "rougail-de-saucisses-de-porc-fr|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Croque au cheddar, oignons et champignons",
-        "dishId": "croque-au-cheddar-oignons-et-champignons|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Escalope de dinde",
-        "dishId": "escalope-de-dinde|soir|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Merguez grillées",
-        "dishId": "merguez-grillees|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
-    },
-    {
-        "type": "dish",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:20:31"
+        "time": "2026-03-09 10:08:42"
     },
     {
         "type": "general",
         "stars": 0,
         "name": "Anonyme",
-        "cat": "",
+        "cat": "entree",
         "food": "",
         "dishId": "",
-        "text": "Mets plus dans l'assiette stp",
-        "time": "2026-03-06 14:17:09"
+        "text": "pas bon",
+        "time": "2026-03-09 10:08:42"
     },
     {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger végétal",
-        "dishId": "hamburger-vegetal|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
-        "stars": 3,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Hamburger au boeuf",
-        "dishId": "hamburger-au-boeuf|soir|jeudi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
-        "stars": 1,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza 4 fromages",
-        "dishId": "pizza-4-fromages|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
+        "type": "general",
         "stars": 2,
         "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Pizza kebab",
-        "dishId": "pizza-kebab|soir|mercredi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Tortellonnis ricotta et épinards sauce crème aux herbes",
-        "dishId": "tortellonnis-ricotta-et-epinards-sauce-creme-aux-herbes|soir|mardi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Rougail végétarienne (saucisses végétales)",
-        "dishId": "rougail-vegetarienne-saucisses-vegetales|soir|lundi",
-        "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "general",
-        "stars": 5,
-        "name": "Anonyme",
         "cat": "",
         "food": "",
         "dishId": "",
         "text": "",
-        "time": "2026-03-06 14:01:52"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Filet de saumon sauce béarnaise",
-        "dishId": "filet-de-saumon-sauce-bearnaise|midi|vendredi",
-        "text": "",
-        "time": "2026-03-06 14:01:25"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Gratin de ratatouille à la polenta et reblochon",
-        "dishId": "gratin-de-ratatouille-a-la-polenta-et-reblochon|midi|lundi",
-        "text": "",
-        "time": "2026-03-06 14:01:25"
-    },
-    {
-        "type": "general",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "",
-        "time": "2026-03-06 14:01:25"
-    },
-    {
-        "type": "dish",
-        "stars": 5,
-        "name": "Anonyme",
-        "cat": "plat-semaine",
-        "food": "Goulash (boeuf paprika)",
-        "dishId": "goulash-boeuf-paprika-midi",
-        "text": "",
-        "time": "2026-03-06 13:47:03"
-    },
-    {
-        "type": "general",
-        "stars": 4,
-        "name": "Anonyme",
-        "cat": "",
-        "food": "",
-        "dishId": "",
-        "text": "",
-        "time": "2026-03-06 13:47:03"
+        "time": "2026-03-09 10:08:42"
     }
 ]

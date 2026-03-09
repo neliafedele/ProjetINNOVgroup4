@@ -29,8 +29,8 @@ $creds = [
         ['user' => 'lucas.dupont', 'pass' => 'rak2025', 'name' => 'Lucas'],
     ],
     'staff' => [
-        ['user' => 'personnel', 'pass' => 'rak2025', 'name' => 'Équipe RAK'],
-        ['user' => 'chef.rak', 'pass' => 'rak2025', 'name' => 'Chef RAK'],
+        ['user' => 'personnel', 'pass' => 'rak2025', 'name' => 'Équipe CROUS'],
+        ['user' => 'chef.rak', 'pass' => 'rak2025', 'name' => 'Chef CROUS'],
     ],
 ];
 

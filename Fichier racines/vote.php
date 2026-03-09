@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     file_put_contents($fichier, json_encode($donneesNormalisees, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), LOCK_EX);
 
     header("Refresh:2; url=index.php");
-    echo "Merci ! Vos réponses ont été prises en compte pour le RAK.";
+    echo "Merci ! Vos réponses ont été prises en compte pour le CROUS.";
     exit;
 }
 ?>

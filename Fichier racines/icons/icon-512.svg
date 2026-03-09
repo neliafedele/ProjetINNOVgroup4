@@ -1,15 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1a1a2e"/>
-      <stop offset="100%" stop-color="#0d0f1a"/>
+      <stop offset="0%" stop-color="#fff7f7"/>
+      <stop offset="100%" stop-color="#ffeaea"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff8557"/>
-      <stop offset="100%" stop-color="#ff6b35"/>
+      <stop offset="0%" stop-color="#e03a47"/>
+      <stop offset="100%" stop-color="#b61e2d"/>
     </linearGradient>
   </defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="168" fill="none" stroke="#4cc9f0" stroke-opacity="0.28" stroke-width="10"/>
-  <text x="256" y="312" text-anchor="middle" font-size="160" font-family="Syne, Arial, sans-serif" font-weight="800" fill="#f0f2ff">R<tspan fill="url(#accent)">A</tspan>K</text>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#b61e2d" stroke-opacity="0.24" stroke-width="10"/>
+  <text x="256" y="240" text-anchor="middle" font-size="72" font-family="Syne, Arial, sans-serif" font-weight="800" fill="#b61e2d">CROUS</text>
+  <g transform="translate(181,276)">
+    <rect x="0" y="56" width="150" height="18" rx="9" fill="#8f1722" opacity="0.85"/>
+    <path d="M22 48 C22 24, 44 10, 75 10 C106 10, 128 24, 128 48" fill="none" stroke="url(#accent)" stroke-width="16" stroke-linecap="round"/>
+  </g>
 </svg>
