@@ -2,10 +2,19 @@
     {
         "user": "etudiant",
         "name": "Étudiant",
-        "presence": 1,
-        "menu_vote": 1,
-        "feedback": 18,
-        "total": 20,
-        "lastActivity": "2026-03-09 10:23:49"
+        "presence": 2,
+        "menu_vote": 2,
+        "feedback": 19,
+        "total": 23,
+        "lastActivity": "2026-03-23 10:21:52",
+        "weeks": {
+            "2026-W13": {
+                "presence": 2,
+                "menu_vote": 2,
+                "feedback": 19,
+                "total": 23
+            }
+        },
+        "weekKey": "2026-W13"
     }
 ]

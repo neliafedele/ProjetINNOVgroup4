@@ -1,6 +1,26 @@
 [
     {
         "type": "dish",
+        "stars": 5,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Aiguillettes de fish & chips",
+        "dishId": "aiguillettes-de-fish-chips|midi|jeudi",
+        "text": "",
+        "time": "2026-03-23 10:21:28"
+    },
+    {
+        "type": "dish",
+        "stars": 3,
+        "name": "Étudiant",
+        "cat": "plat-semaine",
+        "food": "Manchons de canard confits sauce miel et orange",
+        "dishId": "manchons-de-canard-confits-sauce-miel-et-orange|midi|vendredi",
+        "text": "",
+        "time": "2026-03-23 10:21:28"
+    },
+    {
+        "type": "dish",
         "stars": 1,
         "name": "Étudiant",
         "cat": "plat-semaine",
